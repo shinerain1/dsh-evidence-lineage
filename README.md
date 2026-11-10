@@ -1,2 +1,5 @@
 # dsh-project-3
-Third DSH plugin project (planning stage)
+
+第三个 DSH 插件项目的开发仓库，名称暂定。
+
+当前处于规划阶段，尚未发布可安装插件。确定项目主题后，将在本仓库继续实现、测试和发布。
