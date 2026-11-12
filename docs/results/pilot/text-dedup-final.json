@@ -1,0 +1,10 @@
+[
+  {
+    "type": "final",
+    "sessionId": "session-9f2d2fff-dcf9-403b-961a-5d994c01bfbc",
+    "reason": {
+      "kind": "completed"
+    },
+    "text": "{\"cases\":[{\"id\":\"case-1\",\"origin_candidates\":2,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"The agent-a report resolves via its ref to doe and the doe-to-nasa derivation, so it belongs to the NASA source family. The agent-b report resolves to NOAA. This leaves two source families (NASA, NOAA); the differing reference periods also prevent treating them as the same metric. No third independent confirmation exists.\"},{\"id\":\"case-2\",\"origin_candidates\":1,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"Only one material (lab-a) is recorded, with no links or reports. One origin family yields no independent confirmations.\"},{\"id\":\"case-3\",\"origin_candidates\":2,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"The followup's link to primary is citation-only and explicitly adds its own new trial, so primary and followup remain separate origin families. The report refs followup and collapses into that family. The new opposing finding (2/10 failures) is retained, but only two origin families exist and there is no third independent confirmation.\"}]}"
+  }
+]

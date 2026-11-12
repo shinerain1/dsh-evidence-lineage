@@ -1,0 +1,111 @@
+{
+  "kind": "actual-dsh-fixed-context-model-pilot",
+  "model": "deepseek-official/deepseek-flash",
+  "reasoning_effort": "low",
+  "replicates": 1,
+  "cases_per_arm": 3,
+  "tools_allowed": "restriction failed to mount; observed tool_calls=0 in all arms",
+  "results": [
+    {
+      "arm": "raw",
+      "timing": {
+        "arm": "raw",
+        "exit_code": 0,
+        "elapsed_seconds": 60.601
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 1589,
+        "outputTokens": 704,
+        "cacheReadTokens": 5760,
+        "cacheWriteTokens": 0,
+        "totalTokens": 8053
+      },
+      "final_reasons": [
+        {
+          "kind": "completed"
+        }
+      ],
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "text",
+        "final"
+      ],
+      "prompt_sha256": "edf8cc7fd41f978f2ca3984dbead811e65f7c3127b33eaea3634f93133b2d4ec",
+      "prompt_utf8_bytes": 3540
+    },
+    {
+      "arm": "text-dedup",
+      "timing": {
+        "arm": "text-dedup",
+        "exit_code": 1,
+        "elapsed_seconds": 29.975
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 1121,
+        "outputTokens": 4096,
+        "cacheReadTokens": 6016,
+        "cacheWriteTokens": 0,
+        "totalTokens": 11233
+      },
+      "final_reasons": [
+        {
+          "kind": "max-tokens"
+        }
+      ],
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "final"
+      ],
+      "prompt_sha256": "ef94d2e8707e2978e3f53a7b07b8038cfec739b21f4d0e27229d72b9827ee8cb",
+      "prompt_utf8_bytes": 2805
+    },
+    {
+      "arm": "lineage",
+      "timing": {
+        "arm": "lineage",
+        "exit_code": 0,
+        "elapsed_seconds": 10.762
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 2500,
+        "outputTokens": 1000,
+        "cacheReadTokens": 6016,
+        "cacheWriteTokens": 0,
+        "totalTokens": 9516
+      },
+      "final_reasons": [
+        {
+          "kind": "completed"
+        }
+      ],
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "text",
+        "final"
+      ],
+      "prompt_sha256": "a9aea55368bda8401e8ff0d7d98f07e1a5e8788f853c677369635e23c642c131",
+      "prompt_utf8_bytes": 6929
+    }
+  ],
+  "limitations": [
+    "Fixed contexts prepared ahead of inference; not an autonomous search/delegation benchmark",
+    "One run per arm; insufficient for a general model error rate or significance claim",
+    "The raw arm receives the same supplied provenance assertions as lineage; a capable model can interpret them",
+    "Actual usage includes the shared DSH system prompt; no assertion about monetary cost"
+  ],
+  "max_output_tokens_per_arm": 4096,
+  "excluded_from_main_comparison": true,
+  "protocol_issue": "The initial script attempted a context-global tools.restrict call, which DSH rejects. The corrected protocol uses agent/created and agent.ctx.tools.restrict, plus a global deny guard. All initial calls were retained here; no tool calls occurred. One text-dedup response hit max-tokens. Main comparison reran every arm at the same 8192-token output limit."
+}

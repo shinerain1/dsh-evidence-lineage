@@ -1,0 +1,98 @@
+[
+  {
+    "id": "case-1",
+    "data": {
+      "materials": [
+        {
+          "key": "nasa",
+          "url": "https://www.nasa.gov/news-release/nasa-analysis-confirms-2023-as-warmest-year-on-record/",
+          "text": "NASA reports 2023 as the warmest year in its record, about 1.2 C above the 1951-1980 baseline."
+        },
+        {
+          "key": "noaa",
+          "url": "https://www.noaa.gov/news/2023-was-worlds-warmest-year-on-record-by-far",
+          "text": "NOAA's 2023 global temperature anomaly is 1.18 C above the 20th-century average; it ranks first in the NOAA record."
+        },
+        {
+          "key": "agent-a",
+          "kind": "report",
+          "text": "My review of the NASA release finds a record annual temperature for 2023 relative to NASA's historical series.",
+          "refs": [
+            "doe"
+          ]
+        },
+        {
+          "key": "agent-b",
+          "kind": "report",
+          "text": "The NOAA announcement also ranks 2023 highest, but its anomaly uses a different reference period.",
+          "refs": [
+            "noaa"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "child": "doe",
+          "parent": "nasa",
+          "relation": "derivation",
+          "note": "Manually reviewed PDF: NASA title, release 24-008 and NASA URL appear in the footer. This selected excerpt represents the NASA release, not a DOE temperature study."
+        },
+        {
+          "child": "climate",
+          "parent": "noaa",
+          "relation": "derivation",
+          "note": "Manually reviewed Climate.gov page is credited to NOAA NCEI and reports the same NOAA annual analysis. This is an analysis-family assertion, not a claim about statistical independence."
+        }
+      ]
+    }
+  },
+  {
+    "id": "case-2",
+    "data": {
+      "materials": [
+        {
+          "key": "lab-a",
+          "url": "https://lab-a.example/result",
+          "text": "The device stopped after ten minutes."
+        }
+      ],
+      "links": []
+    }
+  },
+  {
+    "id": "case-3",
+    "data": {
+      "materials": [
+        {
+          "key": "primary",
+          "url": "https://primary.example/trial",
+          "text": "The original trial found no failures in ten devices.",
+          "stance": "support"
+        },
+        {
+          "key": "followup",
+          "url": "https://followup.example/trial",
+          "text": "We cite the original trial. In our new trial, two of ten devices failed.",
+          "stance": "oppose"
+        },
+        {
+          "key": "report",
+          "kind": "report",
+          "text": "The device is not uniformly reliable; the new failures must be retained.",
+          "refs": [
+            "followup"
+          ],
+          "stance": "oppose"
+        }
+      ],
+      "links": [
+        {
+          "child": "followup",
+          "parent": "primary",
+          "relation": "citation",
+          "note": "Only a citation: the article explicitly adds its own trial."
+        }
+      ]
+    }
+  }
+]

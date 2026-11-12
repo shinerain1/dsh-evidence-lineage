@@ -1,0 +1,7 @@
+{
+  "library": "prov",
+  "version": "2.1.1",
+  "records": 5,
+  "roundtrip": true,
+  "scope": "PROV-JSON structure/roundtrip only; not a semantic validity or truth proof"
+}

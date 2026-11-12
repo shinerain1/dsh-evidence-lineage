@@ -1,0 +1,119 @@
+{
+  "kind": "actual-dsh-fixed-context-model-pilot",
+  "model": "deepseek-official/deepseek-flash",
+  "reasoning_effort": "low",
+  "max_output_tokens_per_arm": 8192,
+  "replicates": 1,
+  "cases_per_arm": 3,
+  "tools_allowed": false,
+  "results": [
+    {
+      "arm": "raw",
+      "timing": {
+        "arm": "raw",
+        "exit_code": 1,
+        "elapsed_seconds": 54.066
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 1453,
+        "outputTokens": 8192,
+        "cacheReadTokens": 0,
+        "cacheWriteTokens": 0,
+        "totalTokens": 9645
+      },
+      "final_reasons": [
+        {
+          "kind": "max-tokens"
+        }
+      ],
+      "audit_failures": [
+        "No parseable final JSON"
+      ],
+      "guard_load_warning": false,
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "final"
+      ],
+      "prompt_sha256": "edf8cc7fd41f978f2ca3984dbead811e65f7c3127b33eaea3634f93133b2d4ec",
+      "prompt_utf8_bytes": 3540
+    },
+    {
+      "arm": "text-dedup",
+      "timing": {
+        "arm": "text-dedup",
+        "exit_code": 0,
+        "elapsed_seconds": 11.46
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 848,
+        "outputTokens": 916,
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 2148
+      },
+      "final_reasons": [
+        {
+          "kind": "completed"
+        }
+      ],
+      "audit_failures": [
+        "case-2:origin_count"
+      ],
+      "guard_load_warning": false,
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "text",
+        "final"
+      ],
+      "prompt_sha256": "ef94d2e8707e2978e3f53a7b07b8038cfec739b21f4d0e27229d72b9827ee8cb",
+      "prompt_utf8_bytes": 2805
+    },
+    {
+      "arm": "lineage",
+      "timing": {
+        "arm": "lineage",
+        "exit_code": 0,
+        "elapsed_seconds": 13.951
+      },
+      "model_steps": 1,
+      "usage": {
+        "inputTokens": 2228,
+        "outputTokens": 1481,
+        "cacheReadTokens": 384,
+        "cacheWriteTokens": 0,
+        "totalTokens": 4093
+      },
+      "final_reasons": [
+        {
+          "kind": "completed"
+        }
+      ],
+      "audit_failures": [],
+      "guard_load_warning": false,
+      "tool_calls": 0,
+      "event_types": [
+        "session",
+        "status",
+        "thinking",
+        "text",
+        "final"
+      ],
+      "prompt_sha256": "563c06aa57e83b81f59404b905663c4afdd8c45ae7538a065b2f02b1e3a51e26",
+      "prompt_utf8_bytes": 6929
+    }
+  ],
+  "limitations": [
+    "Fixed contexts prepared ahead of inference; not an autonomous search/delegation benchmark",
+    "One run per arm; insufficient for a general model error rate or significance claim",
+    "The raw arm receives the same supplied provenance assertions as lineage; a capable model can interpret them",
+    "Actual usage includes the shared DSH system prompt; no assertion about monetary cost"
+  ]
+}

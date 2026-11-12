@@ -1,0 +1,10 @@
+[
+  {
+    "type": "final",
+    "sessionId": "session-8f0d5c72-7b0b-4768-a2d9-dc840d69ab5e",
+    "reason": {
+      "kind": "max-tokens"
+    },
+    "text": ""
+  }
+]

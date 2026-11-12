@@ -1,0 +1,9 @@
+{
+  "case_id": "<case_id supplied by the parent>",
+  "format": "dsh-evidence-report/v1",
+  "request_key": "research-report-1",
+  "items": [
+    {"text":"A summary based only on the cited material.","refs":["<existing evidence ID>"],"novelty":"derived","stance":"support"},
+    {"text":"A new observation that still needs independent verification.","refs":[],"novelty":"new","stance":"oppose"}
+  ]
+}

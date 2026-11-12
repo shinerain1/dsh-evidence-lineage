@@ -1,0 +1,23 @@
+{
+  "kind": "actual-dsh-host-ptc-offline-provider",
+  "model_calls": 0,
+  "network_searches": 0,
+  "provider_calls": 2,
+  "tools": 10,
+  "workflow_nested_calls": 9,
+  "total_nested_calls": 10,
+  "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
+  "recorded_origins": 1,
+  "folded_items": 2,
+  "repeat_search_new_materials": 0,
+  "retry_avoids_provider_call": true,
+  "host_session_identity_checked": true,
+  "remount_recovery": true,
+  "export_verified": true,
+  "script_sha256": "222361c093e426975c0bda2d3cb918c4d8b69339202f0e3c9ff1434f73a73b61",
+  "limitations": [
+    "Offline deterministic web provider; not a network search or model accuracy evaluation",
+    "Plugin remount within one host process; separate-process SQLite recovery is tested by npm test",
+    "No child LLM was spawned; report contract was called through real DSH tools"
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "climate-2023", "kind": "real-public-source-case", "as_of": "2024-01-12",
+    "question": "Do the supplied NASA, DOE and agent materials constitute three independent measurements? Keep NASA and NOAA baseline definitions separate.",
+    "nodes": [
+      {"key":"nasa","url":"https://www.nasa.gov/news-release/nasa-analysis-confirms-2023-as-warmest-year-on-record/","text":"NASA reports 2023 as the warmest year in its record, about 1.2 C above the 1951-1980 baseline.","origin":"nasa","valuable":"nasa-result"},
+      {"key":"doe","url":"https://www.energy.gov/sites/default/files/2024-02/094.%20Roxana%20Bardan%2C%20NASA%20Release%20Analysis%20Confirms%202023%20as%20Warmest%20Year%20on%20Record.pdf","text":"NASA reports 2023 as the warmest year in its record, about 1.2 C above the 1951-1980 baseline.","origin":"nasa","valuable":"nasa-result"},
+      {"key":"noaa","url":"https://www.noaa.gov/news/2023-was-worlds-warmest-year-on-record-by-far","text":"NOAA's 2023 global temperature anomaly is 1.18 C above the 20th-century average; it ranks first in the NOAA record.","origin":"noaa","valuable":"noaa-result"},
+      {"key":"climate","url":"https://www.climate.gov/news-features/featured-images/2023-was-warmest-year-modern-temperature-record","text":"NOAA's 2023 global temperature anomaly is 1.18 C above the 20th-century average; it ranks first in the NOAA record.","origin":"noaa","valuable":"noaa-result"},
+      {"key":"agent-a","kind":"report","text":"My review of the NASA release finds a record annual temperature for 2023 relative to NASA's historical series.","refs":["doe"],"origin":"nasa","valuable":"nasa-paraphrase"},
+      {"key":"agent-b","kind":"report","text":"The NOAA announcement also ranks 2023 highest, but its anomaly uses a different reference period.","refs":["noaa"],"origin":"noaa","valuable":"baseline-caution"}
+    ],
+    "links":[
+      {"child":"doe","parent":"nasa","relation":"derivation","note":"Manually reviewed PDF: NASA title, release 24-008 and NASA URL appear in the footer. This selected excerpt represents the NASA release, not a DOE temperature study."},
+      {"child":"climate","parent":"noaa","relation":"derivation","note":"Manually reviewed Climate.gov page is credited to NOAA NCEI and reports the same NOAA annual analysis. This is an analysis-family assertion, not a claim about statistical independence."}
+    ],
+    "expected_origins":2,"expected_independence":"unknown","expected_consensus":false,
+    "limitations":"Excerpts are short author-written paraphrases, not a scraped full-page corpus. Agent reports are simulated. NASA and NOAA analyses share observations; two recorded families do not prove statistical independence."
+  },
+  {
+    "id":"independent-equal-wording","kind":"controlled-adversarial-fixture",
+    "question":"Count recorded origin candidates, preserving both independently authored fixture observations even though their text matches.",
+    "nodes":[
+      {"key":"lab-a","url":"https://lab-a.example/result","text":"The device stopped after ten minutes.","origin":"lab-a","valuable":"measurement-a"},
+      {"key":"lab-b","url":"https://lab-b.example/result","text":"The device stopped after ten minutes.","origin":"lab-b","valuable":"measurement-b"}
+    ],"links":[],"expected_origins":2,"expected_independence":"unknown","expected_consensus":false
+  },
+  {
+    "id":"mixed-article","kind":"controlled-adversarial-fixture",
+    "question":"Preserve the new observation and the opposing report. A citation alone does not establish whole-item derivation.",
+    "nodes":[
+      {"key":"primary","url":"https://primary.example/trial","text":"The original trial found no failures in ten devices.","origin":"primary","valuable":"initial-study","stance":"support"},
+      {"key":"followup","url":"https://followup.example/trial","text":"We cite the original trial. In our new trial, two of ten devices failed.","origin":"followup","valuable":"new-failure-data","stance":"oppose"},
+      {"key":"report","kind":"report","text":"The device is not uniformly reliable; the new failures must be retained.","refs":["followup"],"origin":"followup","valuable":"opposition","stance":"oppose"}
+    ],"links":[{"child":"followup","parent":"primary","relation":"citation","note":"Only a citation: the article explicitly adds its own trial."}],"expected_origins":2,"expected_independence":"unknown","expected_consensus":false
+  }
+]

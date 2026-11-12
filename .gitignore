@@ -1,11 +1,9 @@
 node_modules/
-.venv/
-.venv-*/
-__pycache__/
-*.py[cod]
-.pytest_cache/
+.verification/
+*.db
+*.db-shm
+*.db-wal
+*.tgz
 .env
 .env.*
 !.env.example
-.DS_Store
-Thumbs.db

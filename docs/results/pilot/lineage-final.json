@@ -1,0 +1,10 @@
+[
+  {
+    "type": "final",
+    "sessionId": "session-3cd22584-187a-4bd7-b3b8-7ea2ce74f4d1",
+    "reason": {
+      "kind": "completed"
+    },
+    "text": "{\"cases\":[{\"id\":\"case-1\",\"origin_candidates\":2,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"Two recorded origin families remain after collapsing the report and derived items; only two families are present, so three independent confirmations are not established.\"},{\"id\":\"case-2\",\"origin_candidates\":2,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"Two recorded origin families are present, but the identical wording is unresolved and cannot establish statistical independence; no independent confirmation count is established.\"},{\"id\":\"case-3\",\"origin_candidates\":2,\"independent_confirmations\":null,\"three_independent_confirmations_established\":false,\"reason\":\"Two recorded origin families remain: the follow-up's citation of the original trial is citation-only and does not collapse origins, and its report derives from the follow-up; the opposing new findings are retained, but three independent confirmations are not established.\"}]}"
+  }
+]
