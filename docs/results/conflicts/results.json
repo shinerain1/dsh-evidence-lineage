@@ -1,0 +1,3343 @@
+{
+  "kind": "actual-dsh-native-tool-conflict-comparison",
+  "frozen_plugin": "0.1.0",
+  "unique_cases": 12,
+  "planned_runs": 12,
+  "finished_runs": 12,
+  "summary": [
+    {
+      "effort": "off",
+      "arm": "raw",
+      "runs": 3,
+      "case_evaluations": 36,
+      "completed": 36,
+      "correct": 36,
+      "conflict_cases": 18,
+      "conflicts_detected": 18,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 44088
+    },
+    {
+      "effort": "off",
+      "arm": "text-dedup",
+      "runs": 3,
+      "case_evaluations": 36,
+      "completed": 36,
+      "correct": 36,
+      "conflict_cases": 18,
+      "conflicts_detected": 18,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 33910
+    },
+    {
+      "effort": "off",
+      "arm": "lineage",
+      "runs": 3,
+      "case_evaluations": 36,
+      "completed": 36,
+      "correct": 36,
+      "conflict_cases": 18,
+      "conflicts_detected": 18,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 41420
+    },
+    {
+      "effort": "low",
+      "arm": "raw",
+      "runs": 1,
+      "case_evaluations": 12,
+      "completed": 12,
+      "correct": 12,
+      "conflict_cases": 6,
+      "conflicts_detected": 6,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 15066
+    },
+    {
+      "effort": "low",
+      "arm": "text-dedup",
+      "runs": 1,
+      "case_evaluations": 12,
+      "completed": 12,
+      "correct": 12,
+      "conflict_cases": 6,
+      "conflicts_detected": 6,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 12135
+    },
+    {
+      "effort": "low",
+      "arm": "lineage",
+      "runs": 1,
+      "case_evaluations": 12,
+      "completed": 12,
+      "correct": 12,
+      "conflict_cases": 6,
+      "conflicts_detected": 6,
+      "completed_conflict_misses": 0,
+      "nonconflict_false_positives": 0,
+      "incomplete": 0,
+      "total_tokens": 15677
+    }
+  ],
+  "paired": [
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C01",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C02",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C03",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C04",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C05",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C06",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C07",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C08",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C09",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C10",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C11",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 17,
+      "case_id": "C12",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C01",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C02",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C03",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C04",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C05",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C06",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C07",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C08",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C09",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C10",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C11",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 29,
+      "case_id": "C12",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C01",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C02",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C03",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C04",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C05",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C06",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C07",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C08",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C09",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C10",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C11",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "off",
+      "seed": 43,
+      "case_id": "C12",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C01",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C02",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C03",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C04",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C05",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C06",
+      "gold": "conflict",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C07",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C08",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C09",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C10",
+      "gold": "compatible",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C11",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    },
+    {
+      "effort": "low",
+      "seed": 17,
+      "case_id": "C12",
+      "gold": "insufficient",
+      "both_completed": true,
+      "raw_missed_plugin_detected": false,
+      "raw_detected_plugin_missed": false
+    }
+  ],
+  "runs": [
+    {
+      "id": "off-17-raw",
+      "arm": "raw",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 31.528,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 12653,
+        "outputTokens": 1054,
+        "cacheReadTokens": 1024,
+        "cacheWriteTokens": 0,
+        "totalTokens": 14731
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-47970dcd-5341-46f7-beb6-80c1b2dab72f",
+          "call": "call_00_ZU8J865OjfMiiO7wB7Jb7686",
+          "packet_sha256": "f84decdd0a5b48cde76327117642aac773462a1c2dadfad30ee6c05a6e0fe624",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-A states NASA's 2023 anomaly was about 1.2 C above the 1951–1980 average, with about 2.1 F as the Fahrenheit equivalent. C01-B (and its republications) label 2.1 as degrees Celsius for the same analysis and baseline, so it misstates the metric/unit: keeping the 2.1 value but calling it Celsius contradicts C01-A. The many copies are republications of the same assertion, not independent confirmation."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C02-A says the Orion 4.2 audit found unsigned extensions are not permitted to execute under the default configuration, with no exception. C02-B says they are permitted, with no exception. These are opposite conclusions for the same release, configuration and audit. C02-B is a listed derivations summary of C02-A, but being derived does not make it faithful."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same invoice INV-204, the same date (2025-02-18) and the same total-settled-refund metric, C03-A gives exactly USD 138.00, while C03-B (and its republications) gives exactly USD 183.00. Both are 'exactly' and include all adjustments, so rounding cannot reconcile them."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C04-A says all 37 included units in batch B17 passed the final insulation audit, with zero failures and no exclusions. C04-B says unit B17-09, one of the same 37 included units, failed at the same pre-repair final audit. Both cannot hold for the same audit."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same rule R5 effective 2025-06-01, C05-A says an applicant exactly 18 is eligible (18 or older), while C05-B says one exactly 18 is ineligible and eligibility starts strictly above 18. These are directly contradictory."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both cite the signed FINAL revision 3 of report Q7 for region North in April 2025, but C06-A records 420 completed jobs, while C06-B says revision 3 records exactly 390. C06-B misattributes revision 2's 390 figure to revision 3, so it conflicts with C06-A (which reserves 390 for the superseded revision 2)."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "NASA's about 1.2 C (1951–1980 baseline) and NOAA's 1.18 C (20th-century baseline) come from different analyses and different reference periods, so they are not contradictory. About 1.2 also agrees with 1.18 given rounding."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C08-A covers North branch refunds for March 2025 (138), and C08-B covers April 2025 (183). These are different periods, so both can hold."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 F converts exactly to 0 C, so C09-A and C09-B report the same temperature, with a valid unit conversion."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Going from 8% to 10% is both an increase of 2 percentage points and a 25% relative increase (2/8), so C10-A and C10-B state different but valid metrics of the same change."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives a 10% refund rate for March 2025. C11-B gives 12% but does not specify an observation period. Without knowing whether B's period equals or overlaps March 2025, it cannot be decided whether they concern the same entity and period."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A reports 1,000 first-time-customer responses for survey S9 in June 2025. C12-B reports 2,000 responses for an unspecified 'June 2025 customer survey' with unknown survey version and respondent mix, so it cannot be determined whether these concern the same survey and population."
+        }
+      ]
+    },
+    {
+      "id": "off-17-text-dedup",
+      "arm": "text-dedup",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 9.651,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 8767,
+        "outputTokens": 1018,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 11449
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-7ac81519-416d-4901-9c4a-e871828c8e6b",
+          "call": "call_00_GjK3XItC8LaLgzliBSAZ5458",
+          "packet_sha256": "96e11eec06901f64231add012c5b37b20cd9adc5b0a0f180943ba848624096e5",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-R1",
+              "C01-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-R1 claims the 2023 anomaly was 2.1 °C above the 1951–1980 average, explicitly in Celsius; C01-A gives about 1.2 °C for the same analysis and reference period, with 2.1 °F as the Fahrenheit value. 2.1 °C ≈ 3.78 °F ≠ 2.1 °F, so the two cannot both be correct."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-R5",
+              "C02-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same release Orion 4.2 under default configuration, C02-R5 says unsigned extensions are permitted to execute; C02-A says they are not permitted. Both describe the completed audit with no exception, so the statements are directly contradictory."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-R3",
+              "C03-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements describe the same entity and time: the final settled total refund for INV-204 on 2025-02-18. C03-R3 gives the exact amount USD 183.00, while C03-A gives USD 138.00. The same scope and currency apply, so the exact amounts cannot both be correct."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-R6",
+              "C04-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same final audit of batch B17, C04-R6 says unit B17-09 failed the insulation test and was one of the 37 included units. C04-A says all 37 units passed with zero failures. Final results before repair leave no scope difference to reconcile the two."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-R5",
+              "C05-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same Rule R5, effective the same date 2025-06-01, C05-R5 says that an applicant exactly 18 on the filing date is ineligible and that eligibility begins strictly above 18. C05-A says that a person aged 18 or older is eligible and that an applicant exactly 18 is eligible if other requirements are met."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-R5",
+              "C06-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C06-R5 says the final signed revision 3 of Q7 records 390 completed jobs for region North in April 2025. C06-A says revision 3 records 420 jobs and that the superseded revision 2 had 390. Both describe revision 3, so the counts cannot both be correct."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The values come from different agencies (NASA and NOAA), use different analyses and different reference periods (1951–1980 vs 20th century). A changed baseline and a different source explain the 1.2 C vs 1.18 C difference, so the two are not contradictory."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The two counts cover different months: March 2025 (138) versus April 2025 (183), for the same branch. Comparing different periods does not make the two statements conflict."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 °F converts exactly to 0 °C, and both statements refer to the same sensor T3 checkpoint and sample. The reported values are a valid unit conversion and agree."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Changing from 8% to 10% is both 2 percentage points in absolute terms and a 25% relative increase (2/8) when computed against the 8% baseline. The two metrics are different and complementary."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives the March 2025 refund rate of 10%, while C11-R3 gives 12% but does not state its observation period. The time scope does not match, so there is no way to decide whether the two rates are incompatible."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A counts 1,000 completed responses from first-time customers in survey S9 in June 2025. C12-R1 counts 2,000 completed responses for a June 2025 survey but does not identify the survey version or the population. Without that scope, there is no way to determine whether the two counts contradict each other."
+        }
+      ]
+    },
+    {
+      "id": "off-17-lineage",
+      "arm": "lineage",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 9.749,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 11209,
+        "outputTokens": 1075,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 13948
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-a081bfd1-dffa-4aa3-8e39-76eb06991cd4",
+          "call": "call_00_b8Fb3sGDj3QNDWc4Xq416413",
+          "packet_sha256": "dfd0e10b8fa383cee1d44028111849d8f8264b2369492d2e09a36a8228949da1",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-R1"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-A states the 2023 global anomaly was about 1.2 °C above 1951–1980 (about 2.1 °F). C01-R1 describes the same NASA 2023 analysis and 1951–1980 baseline but reports 2.1 °C, claiming it is Celsius not Fahrenheit. Same metric, baseline, and period, but values in the same unit cannot both hold; this is a summary-unit error, not a valid conversion."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both concern release Orion 4.2 under its default configuration with no exception. C02-A says unsigned extensions are not permitted to execute, while C02-R5 says they are permitted. These cannot both hold."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-R3"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both state the final settled total refund (not an installment) for invoice INV-204 on 2025-02-18, including all adjustments. C03-A gives USD 138.00 and C03-R3 gives USD 183.00, which are incompatible amounts for the same entity, date, and metric."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-R6"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe the same final audit of batch B17 with the same 37 included units and no exclusions. C04-A says all 37 passed with zero failures, while C04-R6 says unit B17-09 failed. These statements are directly incompatible."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both apply to rule R5 effective 2025-06-01 and to an applicant exactly 18 on the filing date who meets the other requirements. C05-A says that applicant is eligible; C05-R5 says that applicant is ineligible because eligibility must be strictly above 18. These are incompatible."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe signed FINAL revision 3 of report Q7 for month April 2025 and region North. C06-A says revision 3 records exactly 420 completed jobs, while C06-R5 says revision 3 records exactly 390, the value that C06-A assigns to the superseded revision 2. Same revision, so the two statements are incompatible."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C07-A reports the NASA 2023 anomaly of about 1.2 °C above the 1951–1980 baseline. C07-R1 reports the NOAA 2023 anomaly of 1.18 °C above the 20th-century reference average. The sources and reference periods differ, so the near-equal values do not contradict each other."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C08-A gives the North branch completed-refund count for March 2025 (138). C08-R1 gives it for April 2025 (183). The periods differ, so the differing counts are not in conflict."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C09-A reports 32 °F at the single T3 checkpoint. C09-R1 reports 0 °C for the same checkpoint and sample as a conversion of that Fahrenheit value. 32 °F = 0 °C is a valid unit conversion, so the two statements are compatible."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C10-A reports a rise from 8% to 10%, i.e., 2 percentage points. C10-R1 says the same change is a 25% relative increase computed from the 8% base. These are different but valid measures of the same change, so they are compatible."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives a 10% March 2025 refund rate for the North branch. C11-R1 gives a 12% rate for the North branch but does not specify the period. Since the periods cannot be shown to be the same, the differing rates cannot be judged incompatible."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A reports 1,000 completed responses for June 2025 from first-time customers, survey S9. C12-R1 reports 2,000 completed responses for June 2025 but does not identify the survey version or the respondent population. Whether the two figures cover the same population cannot be determined, so the case cannot be decided."
+        }
+      ]
+    },
+    {
+      "id": "off-29-text-dedup",
+      "arm": "text-dedup",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 9.651,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 8756,
+        "outputTokens": 860,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 11280
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-12394b40-6de2-41ad-bc84-3771d7025839",
+          "call": "call_00_fVD8Srr7uXvjxCUxxTPk5860",
+          "packet_sha256": "fcaec891f6102739fba3615392abf3a2a9ff13a0a9fba560c170570682258e28",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-R2"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both cite the same NASA 2023 annual global temperature analysis against the 1951–1980 average, both in Celsius; C01-A gives ~1.2 C, while C01-R2 gives 2.1 C, in Celsius and explicitly not Fahrenheit."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-R3"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For release Orion 4.2 under default configuration with no exception, C02-A says unsigned extensions may not execute, while C02-R3 says they are permitted to execute."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-R6"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe the final settled total refund (including all adjustments) for INV-204 on 2025-02-18, but give USD 138.00 versus USD 183.00."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-R6"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe the final audit of the same 37 units in batch B17: C04-A says all passed with zero failures and no excluded units, while C04-R6 says unit B17-09, one of the same 37 units, failed the insulation test."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-R4"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same Rule R5 effective 2025-06-01, C05-A says an applicant exactly 18 on the filing date is eligible, while C05-R4 says the same applicant is ineligible because eligibility requires being strictly above 18."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-R2"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both concern the same signed FINAL revision 3 of report Q7, region North, April 2025, completed jobs, but give 420 versus 390, and C06-R2 explicitly attributes 390 to revision 3 rather than the superseded revision 2."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "NOAA's 1.18 C is measured against a 20th-century baseline, while NASA's ~1.2 C is measured against 1951–1980; the different reference periods and analysis methods explain the difference, so there's no same-baseline contradiction."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "One statement covers March 2025 (138 refunds) and the other April 2025 (183 refunds); different periods, so they don't conflict."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 degrees Fahrenheit converts exactly to 0 degrees Celsius, so the statements agree."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The 2 percentage-point change from 8% to 10% and the 25% relative increase (2/8) are both correct; they are different metrics for the same data, not contradictory."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-R4 gives a 12% refund rate with no specified observation period, and C11-A gives 10% for March 2025; because the period of the 12% figure is unknown, it cannot be determined whether the two refer to the same time frame."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A reports 1,000 completed first-time-customer responses for survey S9 in June 2025, while C12-B reports a 2,000-response June 2025 survey whose version and respondent population are unidentified; the population and survey scope don't align, so incompatibility cannot be established."
+        }
+      ]
+    },
+    {
+      "id": "off-29-lineage",
+      "arm": "lineage",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 9.935,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 11198,
+        "outputTokens": 897,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 13759
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-8d896467-c14f-45ab-9468-9eb75ba739dd",
+          "call": "call_00_S0IFhWiLyGMkEO9eNpWu0948",
+          "packet_sha256": "6554ceff28ceb60ed69a7247e4d9648b66b75f2bc2376ddfacc2e60b5fec779c",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-R2",
+              "C01-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-R2 reports the 2023 anomaly as 2.1 °C, explicitly stating the unit is Celsius, for the same analysis, metric, and 1951–1980 baseline. C01-A reports about 1.2 °C for that baseline and lists 2.1 only as the Fahrenheit value. The two statements cannot both be true in Celsius, so the summary misstated the unit."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-R3",
+              "C02-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For Orion 4.2 under the default configuration with no exception, C02-A says unsigned extensions may not execute and C02-R3 says they may. These are direct contradictions, regardless of C02-R3 being a derived summary."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-R6",
+              "C03-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe the final settled total refund for INV-204 on 2025-02-18 in USD, including all adjustments, but give USD 183.00 and USD 138.00."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-R6",
+              "C04-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both concern the final audit of the same 37 units in batch B17. C04-A says zero units failed, but C04-R6 says unit B17-09 failed the insulation test."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-R4",
+              "C05-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both concern rule R5, effective 2025-06-01. C05-A makes an applicant exactly 18 eligible; C05-R4 makes that same applicant ineligible."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-R2",
+              "C06-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both cite the signed FINAL revision 3 of report Q7 for the same region and period, North in April 2025, but give 390 and 420 completed jobs. C06-R2's 390 matches only the superseded revision 2."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both values are for 2023 global temperature. NASA gives about 1.2 °C above its 1951–1980 baseline, and NOAA gives 1.18 °C above a different, 20th-century, baseline. They differ in baseline and source analysis, not necessarily in fact."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The periods are different: C08-A covers March 2025 and C08-R3 covers April 2025. A count of 138 refunds in March does not conflict with 183 in April."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 °F converts exactly to 0 °C for the same T3 checkpoint and sample, so these agree."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A rise of 2 percentage points corresponds to a 25% relative increase when measured against the 8% baseline. These are compatible descriptions of the same change."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives a 10% refund rate for March 2025 at North branch. C11-R4 gives 12% for the same branch but does not state the time period, so it cannot be determined whether the two cover the same period."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A counts 1,000 first-time-customer responses to survey S9 in June 2025. C12-B reports 2,000 total responses to the June 2025 customer survey and does not state which survey version it covers or whether the population is first-time customers, returning customers, or both. The population and survey version have not been shown to match, so the counts cannot be compared."
+        }
+      ]
+    },
+    {
+      "id": "off-29-raw",
+      "arm": "raw",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 11.191,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 12004,
+        "outputTokens": 1029,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 14697
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-714394b6-e4b8-4dc7-9ee3-388a197ce99d",
+          "call": "call_00_a0Z6JqNCXT4mljsy7CSR2941",
+          "packet_sha256": "7518144de1a16ffae18c514783c4103afff2f33d8dd7eefe34152d8031870020",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both cover NASA's 2023 anomaly against the 1951–1980 baseline. C01-A says the anomaly was about 1.2 C, with 2.1 F as the Fahrenheit equivalent. C01-B and its copies claim 2.1 degrees Celsius and explicitly deny that the number is Fahrenheit. 2.1 C is not a valid conversion of 1.2 C."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements cover release Orion 4.2 under its default configuration, and both describe the audit's findings. C02-A says unsigned extensions are not permitted to execute, with no exception. C02-B says they are permitted to execute, with no exception. These cannot both hold."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements give the final settled total refund for invoice INV-204 on 2025-02-18, inclusive of adjustments. C03-A gives USD 138.00 and C03-B gives USD 183.00. The same dollar total cannot be both."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements give the final audit results for batch B17 before any repair or retest, covering the same 37 included units. C04-A says all 37 units passed the insulation test, with zero failures. C04-B says unit B17-09, one of those 37 units, failed. These cannot both hold."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements cover the same rule, R5 effective 2025-06-01, and an applicant exactly 18 years old who meets all other requirements. C05-A says that applicant is eligible; C05-B says that applicant is ineligible. These are direct opposites."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements describe the same signed final revision 3 of report Q7, the same region, and the same period, April 2025. C06-A says that revision records exactly 420 completed jobs. C06-B and its republished copies say it records exactly 390. The two figures cannot both be right."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "These are separate agencies' baseline values. NASA's figure (about 1.2 C) is measured against its 1951–1980 baseline, while NOAA's figure (1.18 C) is measured against the 20th-century average. They come from different analyses with different reference periods, so they are not the same measurement."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The two statements cover different periods. C08-A gives 138 refunds in March 2025, and C08-B gives 183 refunds in April 2025. Different periods is not a conflict."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The two statements describe the same sensor T3 checkpoint and the same sample. 32 degrees Fahrenheit converts exactly to 0 degrees Celsius, and C09-B is explicitly presented as that conversion."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both statements describe the same change, from 8% to 10%. C10-A states it as an increase of 2 percentage points, and C10-B states it as a 25% relative increase measured against the initial 8%. These are two valid ways to express the same change, not contradictory claims."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives a 10% refund rate for March 2025. C11-B gives 12% but does not specify an observation period, and the record notes that no date is supplied. The two statements cannot be compared because it is unknown whether they cover the same period."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A reports 1,000 completed responses from first-time customers to survey S9 in June 2025. C12-B reports 2,000 completed responses to the June 2025 customer survey, but does not say which survey version was used or which respondent groups were included. C12-B does not state whether its 2,000 covers the same population as C12-A's first-time respondents."
+        }
+      ]
+    },
+    {
+      "id": "off-43-lineage",
+      "arm": "lineage",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 10.223,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 11202,
+        "outputTokens": 847,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 13713
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-3d0efa59-fb60-4105-9760-f0b1bab8bd34",
+          "call": "call_00_lrqC4Uvn1yXo0IRRUOKJ8063",
+          "packet_sha256": "ececb48bdc7c4ee4799579e32644692c629ff5e2735098ab921c56b9a3feb0b9",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-R7",
+              "C01-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-R7 reported the same NASA 2023 anomaly above the same 1951–1980 baseline as 2.1 °C. C01-A gives about 1.2 °C, and its 2.1 figure is in Fahrenheit. R7 mislabels the Fahrenheit value as Celsius, so the two statements cannot both hold."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-R8",
+              "C02-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same release, Orion 4.2, and the same default configuration, C02-A records that unsigned extensions may not execute, while C02-R8 records that they are permitted to execute. The summary inverts the original audit finding."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-R3",
+              "C03-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both materials cover the same entity, date, currency and final total refund, but give USD 183.00 and USD 138.00 respectively."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-R4",
+              "C04-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same final B17 audit, C04-A says all 37 units passed with zero failures, while C04-R4 says unit B17-09 failed the same test as one of the same 37 units."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-R1",
+              "C05-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same R5 rule effective 2025-06-01, C05-A says an applicant who is exactly 18 is eligible, while C05-R1 says that same applicant is ineligible and eligibility begins strictly above age 18."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-R5",
+              "C06-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C06-R5 attributes 390 jobs to revision 3, explicitly not the superseded revision 2. C06-A says revision 3 records 420 jobs and that 390 was revision 2's figure. Both describe the same revision of the same report, so they disagree."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The 1.18 °C anomaly (NOAA, 20th-century baseline) and the ~1.2 °C anomaly (NASA, 1951–1980 baseline) use different baselines and different analyses. A change of baseline is not a conflict."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The 138 refunds are for March 2025 and the 183 refunds are for April 2025. Different periods and the same branch do not conflict."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 °F converts exactly to 0 °C for the same sensor checkpoint and sample, so the two statements agree."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "An increase from 8% to 10% is both 2 percentage points and a 25% relative increase. Both statements are correct and compatible."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The 12% refund rate has no stated period or date, while the 10% rate is for March 2025. Because the 12% figure's scope is unknown, it cannot be determined whether the two cover the same period."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The 2,000 responses may be from first-time customers, returning customers or both, and the survey version is not identified. That population is too vague to determine whether it is the same as the 1,000 first-time responses from survey S9."
+        }
+      ]
+    },
+    {
+      "id": "off-43-raw",
+      "arm": "raw",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 10.815,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 11996,
+        "outputTokens": 1000,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 14660
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-b1c99991-45f4-4bda-b454-b31683376052",
+          "call": "call_00_x8rOWJD3gOOdDS0Eursn3118",
+          "packet_sha256": "d4c9c50798cf61953f1f7098d9bd27e9a769692015059d4fdfeb8f1465790838",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-A gives NASA's 2023 anomaly as about 1.2 C, equal to about 2.1 F. C01-B and its reprints say it was 2.1 C, stating the number is Celsius, not Fahrenheit. That is a unit error, not a valid conversion: 2.1 C is about 3.8 F. Same analysis and baseline, different Celsius values."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C02-A says Orion 4.2's completed audit found unsigned extensions are not permitted under the default configuration, with no exception. C02-B, a summary of A, says they are permitted and no exception applies. Same release and same configuration, but opposite results, so B is not a faithful summary."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C03-A gives the final settled refund for INV-204 on 2025-02-18 as USD 138.00. C03-B and its reprints give USD 183.00 for the same final settled total. Same invoice, date, scope and currency, so the amounts contradict each other."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C04-A says all 37 units in batch B17 passed the final insulation test with zero failures. C04-B and its reprints say unit B17-09, one of the same 37 units, failed that same final audit. Same batch, metric and audit stage, so the statements cannot both hold."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C05-A says rule R5, effective 2025-06-01, makes an applicant exactly 18 eligible. C05-B and its reprints say the same rule and date make an applicant exactly 18 ineligible. Same rule, effective date and age boundary, so they cannot both hold."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C06-A says the signed final revision 3 of report Q7 records 420 North-region jobs for April 2025. C06-B and its reprints say revision 3 records 390 jobs and explicitly deny being revision 2. Same revision, region, period and metric, but different figures."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C07-A: NASA reports about 1.2 C above its own 1951-1980 baseline. C07-B and its reprints: NOAA reports 1.18 C above the 20th-century average. Different agencies and different reference periods, so both can hold."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C08-A covers March 2025 (138 refunds). C08-B and its reprints cover April 2025 (183 refunds). Different months, so both can hold."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 F converts exactly to 0 C. C09-B and its reprints state the same reading in Celsius, so there is no disagreement."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both sources describe the same change, from 8% to 10%. C10-A gives it as 2 percentage points. C10-B gives it as a 25% relative increase measured against the 8% starting rate. Both express the same change in different units."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A reports a 10% refund rate for March 2025. C11-B and its reprints report 12% with no observation period given. Without a known period the 12% cannot be compared with the March figure, so no conflict can be confirmed."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-B reports 2,000 completed responses for the June 2025 survey but does not identify the survey version or the respondent mix. C12-A reports 1,000 first-time-customer responses for survey S9 in June 2025. The 2,000 could include returning customers or another survey version, so scope is missing."
+        }
+      ]
+    },
+    {
+      "id": "off-43-text-dedup",
+      "arm": "text-dedup",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 9.636,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 8756,
+        "outputTokens": 761,
+        "cacheReadTokens": 1664,
+        "cacheWriteTokens": 0,
+        "totalTokens": 11181
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-9da7ec92-d594-4a23-85fa-266c07f06596",
+          "call": "call_00_wSccaqI7TC2LHMfbwZzM4182",
+          "packet_sha256": "ac2ff0db52dcd88798ca3499cb842f3e9eeb2a75e8ae9934d9692ec685025f3d",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-R7"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A states the 2023 NASA anomaly was about 1.2 °C (about 2.1 °F) above the 1951–1980 average; the summary derivative R7 misattributes 2.1 °C to the same metric, baseline, and period, which is not a unit conversion."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-R8"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A says unsigned extensions are not permitted under Orion 4.2 default configuration; the summary R8 says they are permitted, for the same release, configuration, and no exception."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-R3"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same invoice INV-204, date, and USD total-refund metric, one record says exactly 183.00 and the other says exactly 138.00."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-R4"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A says all 37 units in the final audit of batch B17 passed with zero failures; R4 says unit B17-09 among the same 37 units failed."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-R1"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For rule R5, an applicant exactly 18 is eligible per A but ineligible per R1; same rule, effective date, and requirements."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A says FINAL revision 3 records 420 North jobs in April 2025; R5 says revision 3 records 390 for the same region and period."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The difference comes from different baselines and analyses: NOAA uses its own analysis and 20th-century reference average, giving 1.18 °C, and NASA uses 1951–1980, giving about 1.2 °C. These are not incompatible."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "March 2025 count of 138 and April 2025 count of 183 cover different periods; each is stated to cover only its month."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 °F equals 0 °C. B is a stated conversion of the same sensor checkpoint and sample reading."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "8% to 10% is a 2-percentage-point increase and also a 25% relative increase. Both are correct under different metrics."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A gives a 10% refund rate for March 2025, but B gives 12% without an observation period. With no stated period for B, we cannot tell whether the statements cover the same time."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A reports 1,000 first-time customer responses for Survey S9; B reports 2,000 total responses without identifying the survey version or respondent population, so it cannot be shown that the populations or metric scope are the same."
+        }
+      ]
+    },
+    {
+      "id": "low-17-raw",
+      "arm": "raw",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 12.187,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 12576,
+        "outputTokens": 1338,
+        "cacheReadTokens": 1152,
+        "cacheWriteTokens": 0,
+        "totalTokens": 15066
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-85b458b5-d2c0-4b9b-be1e-dae7e3444040",
+          "call": "call_00_ET_3DeeRk12Ps7uy2NdP3CJ1073",
+          "packet_sha256": "f84decdd0a5b48cde76327117642aac773462a1c2dadfad30ee6c05a6e0fe624",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-A gives the NASA 2023 anomaly as about 1.2 °C above 1951–1980 (2.1 °F), while C01-B states the same analysis found 2.1 °C; same entity, period, and baseline, incompatible values in the stated units."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same release Orion 4.2 default configuration, C02-A states unsigned extensions are not permitted while C02-B states they are permitted; directly contradictory."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same invoice INV-204 on 2025-02-18 as the total settled refund, C03-A gives USD 138.00 and C03-B gives USD 183.00; incompatible amounts."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C04-A says all 37 units passed with zero failures, while C04-B says unit B17-09, one of the same 37 units, failed in the same final audit; cannot both hold."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same rule R5 effective 2025-06-01, C05-A says an applicant exactly 18 is eligible while C05-B says exactly 18 is ineligible; directly contradictory."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-B"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both address signed FINAL revision 3 of report Q7 for region North in April 2025, but C06-A gives 420 completed jobs while C06-B gives 390; same revision, incompatible counts."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "NASA's ~1.2 °C anomaly against 1951–1980 and NOAA's 1.18 °C anomaly against the 20th-century average are different analyses and different reference periods, so no conflict."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C08-A covers March 2025 (138 refunds) and C08-B covers April 2025 (183 refunds); different periods, so both can hold."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 °F equals 0 °C, and C09-B explicitly reports a conversion of the original Fahrenheit reading for the same sensor checkpoint and sample; consistent."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A 2-percentage-point increase from 8% to 10% corresponds to a 25% relative increase computed on the initial 8%; the two statements describe the same change in different metric framings and both hold."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-A gives a 10% refund rate specifically for March 2025, while C11-B gives 12% with no observation period supplied; missing time scope prevents deciding whether they are comparable."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-A reports 1,000 first-time responses for survey S9 in June 2025, while C12-B reports 2,000 completed responses for an unspecified June 2025 survey version and population; missing scope prevents deciding whether they conflict."
+        }
+      ]
+    },
+    {
+      "id": "low-17-text-dedup",
+      "arm": "text-dedup",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 14.006,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 8686,
+        "outputTokens": 1657,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": 0,
+        "totalTokens": 12135
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-03ed45ed-eb6d-413b-8410-3ff532258d38",
+          "call": "call_00_ET_s5gLhGJGBHrRJ3uXE8or3363",
+          "packet_sha256": "96e11eec06901f64231add012c5b37b20cd9adc5b0a0f180943ba848624096e5",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-R1",
+              "C01-A"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "R1 states the 1951–1980 anomaly was 2.1 degrees Celsius, explicitly saying Celsius not Fahrenheit, while A states the same analysis gave about 1.2 C (with 2.1 being Fahrenheit). Same entity, period, reference baseline, and metric cannot hold both values in Celsius."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same release Orion 4.2 under the default configuration, A says unsigned extensions are not permitted while R5 says they are permitted, with no exception applying in either."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-R3"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Same invoice INV-204, same date, both the final total refund including all adjustments, but A states USD 138.00 and R3 states USD 183.00."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-R6"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A says all 37 units in batch B17 passed with zero failures and no excluded units; R6 says unit B17-09, one of the same 37 included units, failed. Same batch, same final audit, incompatible."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same rule R5 effective 2025-06-01, A says an applicant exactly 18 satisfying other requirements is eligible, while R5 says exactly 18 is ineligible and eligibility begins strictly above 18."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both address the signed FINAL revision 3 of report Q7 for region North in April 2025, yet A states exactly 420 completed jobs while R5 states exactly 390 and explicitly attributes 390 to revision 3 (the value A assigns to superseded revision 2)."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Different agencies/analyses report different anomalies against different reference periods (NOAA 1.18 C vs 20th-century average; NASA about 1.2 C vs 1951–1980), which is not a conflict."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The counts refer to different months — March 2025 (138) versus April 2025 (183) — with each count explicitly scoped to its own month."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 degrees Fahrenheit equals 0 degrees Celsius; the same sensor checkpoint and sample are reported in different units with a valid conversion."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A 2 percentage-point increase from 8% to 10% corresponds to a 25% relative increase computed on the initial 8%; both statements are simultaneously true."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "R3 gives a 12% refund rate but specifies no observation period or date, so it cannot be established whether it covers the same March 2025 period as A's 10% rate for North branch."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "R1 gives 2,000 completed responses for June 2025 without identifying the survey version or whether respondents are first-time, returning, or both, so it cannot be determined whether A's 1,000 first-time responses for Survey S9 concern the same survey and population."
+        }
+      ]
+    },
+    {
+      "id": "low-17-lineage",
+      "arm": "lineage",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "exit_code": 0,
+      "stopped_by_runner": null,
+      "elapsed_seconds": 20.116,
+      "final_reason": {
+        "kind": "completed"
+      },
+      "protocol_errors": [],
+      "parse_error": null,
+      "model_steps": 2,
+      "usage": {
+        "inputTokens": 11135,
+        "outputTokens": 2750,
+        "cacheReadTokens": 1792,
+        "cacheWriteTokens": 0,
+        "totalTokens": 15677
+      },
+      "tool_calls": [
+        "conflict_packet"
+      ],
+      "tool_audit": [
+        {
+          "session": "session-79418a15-25f2-435f-83e2-310b87f0637c",
+          "call": "call_00_gO96pXJn9gUWm2ds0KZU2701",
+          "packet_sha256": "dfd0e10b8fa383cee1d44028111849d8f8264b2369492d2e09a36a8228949da1",
+          "cases": 12
+        }
+      ],
+      "rows": [
+        {
+          "case_id": "C01",
+          "case_key": "temperature-unit-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C01-A",
+              "C01-R1"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C01-A gives the 2023 anomaly as about 1.2 C (about 2.1 F), while C01-R1 states 2.1 C for the same NASA analysis, explicitly rejecting Fahrenheit."
+        },
+        {
+          "case_id": "C02",
+          "case_key": "negation-drift",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C02-A",
+              "C02-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same release Orion 4.2 default configuration, C02-A says unsigned extensions are not permitted, while C02-R5 says they are permitted and no exception applies."
+        },
+        {
+          "case_id": "C03",
+          "case_key": "refund-value",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C03-A",
+              "C03-R3"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "Both describe the final total refund for invoice INV-204 on 2025-02-18, but give incompatible amounts of USD 138.00 and USD 183.00."
+        },
+        {
+          "case_id": "C04",
+          "case_key": "universal-exception",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C04-A",
+              "C04-R6"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C04-A says all 37 units passed with zero failures and no exclusions; C04-R6 says unit B17-09, one of the same 37 included units, failed the final audit."
+        },
+        {
+          "case_id": "C05",
+          "case_key": "eligibility-boundary",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C05-A",
+              "C05-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "For the same Rule R5 and effective date, C05-A makes an applicant exactly 18 eligible, while C05-R5 makes an applicant exactly 18 ineligible."
+        },
+        {
+          "case_id": "C06",
+          "case_key": "revision-scope-conflict",
+          "gold": "conflict",
+          "complete": true,
+          "predicted": "conflict",
+          "pairs": [
+            [
+              "C06-A",
+              "C06-R5"
+            ]
+          ],
+          "valid_conflict_pair": true,
+          "conflict_detected": true,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C06-A says signed final revision 3 reports 420 jobs and revision 2 reported 390; C06-R5 attributes exactly 390 jobs to that same signed final revision 3."
+        },
+        {
+          "case_id": "C07",
+          "case_key": "different-baselines",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The statements concern different analyses and reference periods (NASA 1951-1980 versus NOAA 20th-century), with about 1.2 C versus 1.18 C also compatible by rounding."
+        },
+        {
+          "case_id": "C08",
+          "case_key": "different-periods",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "The refund counts are for different periods: 138 in March 2025 and 183 in April 2025, each explicitly limited to that month."
+        },
+        {
+          "case_id": "C09",
+          "case_key": "equivalent-units",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "32 degrees Fahrenheit converts exactly to 0 degrees Celsius for the same T3 checkpoint and sample; no incompatible content."
+        },
+        {
+          "case_id": "C10",
+          "case_key": "percentage-points",
+          "gold": "compatible",
+          "complete": true,
+          "predicted": "compatible",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "A rise from 8% to 10% is both a 2-percentage-point increase and a 25% relative increase; these use different metrics and can both hold."
+        },
+        {
+          "case_id": "C11",
+          "case_key": "missing-period",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C11-R1 gives a 12% refund rate without an observation period, while C11-A is specifically for March 2025; missing period prevents deciding whether they describe the same timeframe."
+        },
+        {
+          "case_id": "C12",
+          "case_key": "missing-population",
+          "gold": "insufficient",
+          "complete": true,
+          "predicted": "insufficient",
+          "pairs": [],
+          "valid_conflict_pair": false,
+          "conflict_detected": false,
+          "correct": true,
+          "missed_conflict": false,
+          "false_positive": false,
+          "reason": "C12-R1 does not identify the survey version or whether respondents are first-time, returning, or both, so its 2,000 responses cannot be determined to cover the same population as C12-A's 1,000 first-time-customer responses."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Fixed controlled materials, not autonomous web research",
+    "Source relations supplied in every arm; no source-discovery accuracy claim",
+    "Repeated orderings share 12 underlying cases, not independent populations",
+    "Model reasoning settings reported separately; no selective pooling"
+  ]
+}

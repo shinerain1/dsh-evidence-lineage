@@ -49,6 +49,8 @@ dsh plugin add https://github.com/shinerain1/dsh-evidence-lineage/releases/downl
 
 见 [实验报告](docs/EXPERIMENTS.md)、[真实案例及来源](docs/REAL-CASE.md)、[机器可读结果](docs/results/)。包含实际 DSH 工具/PTC 测试、独立进程恢复、对抗样例、真实模型固定上下文对照及 PROV 库互操作。
 
+**新增冲突识别对照：** 在实际 DSH 工具管线中，原始材料、保留来源的普通去重、插件视图三组均正确完成预设的 12 个案例；三次顺序重复与补充推理模式中，未观察到“原始 DSH 漏判、插件检出”的增益。见 [完整报告及原始结果](docs/CONFLICT-EXPERIMENT.md)。当前不将自动冲突识别作为已证实的插件收益。
+
 **没有将确定性计数实验写成“大模型错误率降低”的证据。** 原始 DSH 也可以正确理解来源关系；插件价值是把可恢复记录、保守折叠和可查验引用固化为流程。
 
 ## 开发与复现

@@ -1,0 +1,128 @@
+{
+  "valid": true,
+  "checked_runs": 12,
+  "rows": [
+    {
+      "id": "off-17-raw",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 46915,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "e1d3ac642e7254f4272e2cc4142550cfdf507f8b0d8f4abfd70030185fa5db26"
+    },
+    {
+      "id": "off-17-text-dedup",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 31963,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "e8d9caf1afed8bdb491a22a19a64cfa730d72de985f252b263360b1fe8db1ff3"
+    },
+    {
+      "id": "off-17-lineage",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 40899,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "56c18fd6b636653dd703e48e19a84c59d545dcb23c0dc14336a5eae904eee213"
+    },
+    {
+      "id": "off-29-text-dedup",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 31963,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "30fa81ff9809df0ed0f18f19cad6151f1fb27c826a5632c34075a8c423be0a82"
+    },
+    {
+      "id": "off-29-lineage",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 40915,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "82fb96db90e4eea3d89c0a09b1c990cf1556162b15e318ff77f6c13f13cfc8f8"
+    },
+    {
+      "id": "off-29-raw",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 46915,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "86520be3bbee7856678119dc5356eeae0d3d1077c3f5cab5dfa50ace0b2adbb6"
+    },
+    {
+      "id": "off-43-lineage",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 40899,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "688d204c4a85737c57fbea2e408e64c3ae066597526b6ca9a65d0e9df3916b20"
+    },
+    {
+      "id": "off-43-raw",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 46915,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "a12c1fe9153ae80ab37b34d05f20d7f8dbc4a308d6c21e7b15943fdc8cdd6fa2"
+    },
+    {
+      "id": "off-43-text-dedup",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 31963,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "056781fd0efc4cf3b7091e9849557a3afd35f4acc75906f1f024d33350fd782f"
+    },
+    {
+      "id": "low-17-raw",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 46915,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "cdb9309410a77ed54bd0c14c12d093a486cae10a516e7099a7e9238ea525bd21"
+    },
+    {
+      "id": "low-17-text-dedup",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 31963,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "dc3547d1b008aa8349b21701d3692ae58fe2c903a2518eafc315572be1b891f4"
+    },
+    {
+      "id": "low-17-lineage",
+      "persisted_tool_result_matches_packet": true,
+      "full_tool_result_bytes": 40899,
+      "all_cases": 12,
+      "cli_tool_display_truncated": true,
+      "final_answer_matches_session": true,
+      "session_title_requests": 1,
+      "session_log_sha256": "252263396979559f022fd14937650ce59d7078df23f4aa973ecea7d809ab9894"
+    }
+  ],
+  "usage_scope": "Reported usage in results.json is main Agent step_end usage. Background session-title requests are counted here but their usage is not included; totals are not a billing statement.",
+  "cli_note": "DSH headless bounds display strings to 8 KiB. Full tool-result payloads were independently checked in persisted Session events; no source material was lost there."
+}

@@ -81,3 +81,7 @@ node scripts/agent-pilot.mjs audit
 ```
 
 可选 PROV 互操作验证，在独立 Python 环境安装 `prov==2.1.1 lxml rdflib`，运行 `python scripts/verify-prov.py`。正常安装使用插件不需要 Python。
+
+## 5. 后续冲突识别验证
+
+2026-11-12 对现有 v0.1.0 另做了运行前冻结协议的实际 DSH 工具对照：12 个案例，原始材料、保留来源的普通去重、插件视图，三次顺序重复和一次 low 推理补充。三组均识别全部冲突，无误报；配对增益为 0。当前没有证据支持“插件发现原始 DSH 识别不了的冲突”。详见 [冲突实验报告](CONFLICT-EXPERIMENT.md)。此实验没有修改插件运行代码，也没有替换或隐藏本页早期小试验的结果。
