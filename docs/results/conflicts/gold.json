@@ -1,0 +1,254 @@
+[
+  {
+    "id": "C01",
+    "key": "temperature-unit-drift",
+    "label": "conflict",
+    "reason": "Same analysis, year and baseline; 1.2 C and 2.1 C disagree. B has an injected unit-transcription error.",
+    "side_a": [
+      "C01-A"
+    ],
+    "side_b": [
+      "C01-B",
+      "C01-R1",
+      "C01-R2",
+      "C01-R3",
+      "C01-R4",
+      "C01-R5",
+      "C01-R6",
+      "C01-R7",
+      "C01-R8"
+    ],
+    "provenance": "Real NASA 2023 fact with a deliberately injected unit error in a synthetic derivative; not a real false NASA statement."
+  },
+  {
+    "id": "C02",
+    "key": "negation-drift",
+    "label": "conflict",
+    "reason": "Opposite permission statements about the same release and default configuration.",
+    "side_a": [
+      "C02-A"
+    ],
+    "side_b": [
+      "C02-B",
+      "C02-R1",
+      "C02-R2",
+      "C02-R3",
+      "C02-R4",
+      "C02-R5",
+      "C02-R6",
+      "C02-R7",
+      "C02-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C03",
+    "key": "refund-value",
+    "label": "conflict",
+    "reason": "Different exact final totals for the same invoice, date and currency.",
+    "side_a": [
+      "C03-A"
+    ],
+    "side_b": [
+      "C03-B",
+      "C03-R1",
+      "C03-R2",
+      "C03-R3",
+      "C03-R4",
+      "C03-R5",
+      "C03-R6",
+      "C03-R7",
+      "C03-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C04",
+    "key": "universal-exception",
+    "label": "conflict",
+    "reason": "All included units passed versus an included unit failed in the same final test.",
+    "side_a": [
+      "C04-A"
+    ],
+    "side_b": [
+      "C04-B",
+      "C04-R1",
+      "C04-R2",
+      "C04-R3",
+      "C04-R4",
+      "C04-R5",
+      "C04-R6",
+      "C04-R7",
+      "C04-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C05",
+    "key": "eligibility-boundary",
+    "label": "conflict",
+    "reason": "Inclusion and exclusion of the same boundary-age applicant under the same rule.",
+    "side_a": [
+      "C05-A"
+    ],
+    "side_b": [
+      "C05-B",
+      "C05-R1",
+      "C05-R2",
+      "C05-R3",
+      "C05-R4",
+      "C05-R5",
+      "C05-R6",
+      "C05-R7",
+      "C05-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C06",
+    "key": "revision-scope-conflict",
+    "label": "conflict",
+    "reason": "Same explicit final revision, region and month; conflicting counts. The old revision number does not resolve B's claim.",
+    "side_a": [
+      "C06-A"
+    ],
+    "side_b": [
+      "C06-B",
+      "C06-R1",
+      "C06-R2",
+      "C06-R3",
+      "C06-R4",
+      "C06-R5",
+      "C06-R6",
+      "C06-R7",
+      "C06-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C07",
+    "key": "different-baselines",
+    "label": "compatible",
+    "reason": "Different analysis and reference baseline; the numerical difference alone is not a contradiction.",
+    "side_a": [
+      "C07-A"
+    ],
+    "side_b": [
+      "C07-B",
+      "C07-R1",
+      "C07-R2",
+      "C07-R3",
+      "C07-R4",
+      "C07-R5",
+      "C07-R6",
+      "C07-R7",
+      "C07-R8"
+    ],
+    "provenance": "Short author-written paraphrases of real NASA and NOAA publications; no injected error."
+  },
+  {
+    "id": "C08",
+    "key": "different-periods",
+    "label": "compatible",
+    "reason": "Different months, so both counts can hold.",
+    "side_a": [
+      "C08-A"
+    ],
+    "side_b": [
+      "C08-B",
+      "C08-R1",
+      "C08-R2",
+      "C08-R3",
+      "C08-R4",
+      "C08-R5",
+      "C08-R6",
+      "C08-R7",
+      "C08-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C09",
+    "key": "equivalent-units",
+    "label": "compatible",
+    "reason": "32 F equals 0 C.",
+    "side_a": [
+      "C09-A"
+    ],
+    "side_b": [
+      "C09-B",
+      "C09-R1",
+      "C09-R2",
+      "C09-R3",
+      "C09-R4",
+      "C09-R5",
+      "C09-R6",
+      "C09-R7",
+      "C09-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example using a standard unit conversion."
+  },
+  {
+    "id": "C10",
+    "key": "percentage-points",
+    "label": "compatible",
+    "reason": "Two percentage points and 25 percent relative increase describe the same change.",
+    "side_a": [
+      "C10-A"
+    ],
+    "side_b": [
+      "C10-B",
+      "C10-R1",
+      "C10-R2",
+      "C10-R3",
+      "C10-R4",
+      "C10-R5",
+      "C10-R6",
+      "C10-R7",
+      "C10-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C11",
+    "key": "missing-period",
+    "label": "insufficient",
+    "reason": "B lacks a period; cannot establish either same-period contradiction or different-period compatibility.",
+    "side_a": [
+      "C11-A"
+    ],
+    "side_b": [
+      "C11-B",
+      "C11-R1",
+      "C11-R2",
+      "C11-R3",
+      "C11-R4",
+      "C11-R5",
+      "C11-R6",
+      "C11-R7",
+      "C11-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  },
+  {
+    "id": "C12",
+    "key": "missing-population",
+    "label": "insufficient",
+    "reason": "Missing population and survey identity prevent a definitive contradiction judgment.",
+    "side_a": [
+      "C12-A"
+    ],
+    "side_b": [
+      "C12-B",
+      "C12-R1",
+      "C12-R2",
+      "C12-R3",
+      "C12-R4",
+      "C12-R5",
+      "C12-R6",
+      "C12-R7",
+      "C12-R8"
+    ],
+    "provenance": "Wholly synthetic controlled example."
+  }
+]

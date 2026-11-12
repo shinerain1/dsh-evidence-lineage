@@ -1,0 +1,142 @@
+{
+  "created_utc": "2026-11-12T04:02:11.869Z",
+  "plugin_version": "0.1.0",
+  "plugin_source_commit": "3406417cfcec0a6950795302a0a28ef7c1dc55cb",
+  "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
+  "model": "deepseek-official/deepseek-flash",
+  "primary_unique_cases": 12,
+  "primary_repetitions": 3,
+  "plans": [
+    {
+      "arm": "raw",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-17-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-17-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 17,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-17-lineage"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-29-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-29-lineage"
+    },
+    {
+      "arm": "raw",
+      "seed": 29,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-29-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-43-lineage"
+    },
+    {
+      "arm": "raw",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-43-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 43,
+      "effort": "off",
+      "max_tokens": 4096,
+      "id": "off-43-text-dedup"
+    },
+    {
+      "arm": "raw",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "id": "low-17-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "id": "low-17-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 17,
+      "effort": "low",
+      "max_tokens": 16384,
+      "id": "low-17-lineage"
+    }
+  ],
+  "hashes": {
+    "experiments/conflicts/cases.json": "35224f9cb01bcbf1340daae7a1b827810c45316f7de12e21d4103f2605940111",
+    "experiments/conflicts/PROTOCOL.md": "6dc37d2fdfd10ea7b29edacbb3248541b4a6c1ab39857f819371688de2efecc7",
+    "experiments/conflicts/packet-plugin.mjs": "93a9057680fcc77999dfec8cd78b57848db77ecb1ba18cb18e2d30bc798b0dba",
+    "scripts/conflict-eval.mjs": "ff2a280b8175301cf62c9a800e17d5649b1ce02cd5a00043a66250a165fce107",
+    "src/store.ts": "6165eefde44367f701eefd742e599b9684df7bd11aef5015cd028466693bd75c",
+    "lib/store.js": "0e85e58681818e08da25a6171c75f294112b24f40c537d3aa67cd5851ff53278"
+  },
+  "packet_hashes": {
+    "raw-17": {
+      "sha256": "9495562601ba34c37d94df82bdc9b3c9e12059c3625d67ecfacf532c773cd295",
+      "bytes": 46915
+    },
+    "text-dedup-17": {
+      "sha256": "ac8701e60452976f2acef29f664e3ad1786c583479a700aa3339dff99403745e",
+      "bytes": 31963
+    },
+    "lineage-17": {
+      "sha256": "18f8ad3cd07e8521024078c810275c0489132df55dda435e1714bca5f9ca2099",
+      "bytes": 40899
+    },
+    "raw-29": {
+      "sha256": "7af239ace7870e9ee1fa26320a3cd3d10914b3e52ed6ad9517d05c71c656a9a7",
+      "bytes": 46915
+    },
+    "text-dedup-29": {
+      "sha256": "1164ed907d73524f6e4c41b691841ed46e5a76178fe884740791c0522870547f",
+      "bytes": 31963
+    },
+    "lineage-29": {
+      "sha256": "f17d4d794ef69cb915cd177f2b6bb7962e2dea6e3d65af216de7c61041a66bb4",
+      "bytes": 40915
+    },
+    "raw-43": {
+      "sha256": "db662065ce33431d0d82a073c62cc8ec59f8e016690c335faf55e7794756ec5e",
+      "bytes": 46915
+    },
+    "text-dedup-43": {
+      "sha256": "168d67ada6bed44888b2056e0da5d889f8924ef86ca8906bbb5ee0c68038a40d",
+      "bytes": 31963
+    },
+    "lineage-43": {
+      "sha256": "89b2bdc782bb9249367e0fe659d13c2cc5c94fdd42b19760cd3b75ee16155bc7",
+      "bytes": 40899
+    }
+  },
+  "task_sha256": "248a35be499b255ab7b3c6ff767a0488a6acf3867fff3264c4fbf8f1c64224a1"
+}

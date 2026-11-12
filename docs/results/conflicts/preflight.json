@@ -1,0 +1,27 @@
+{
+  "kind": "actual-dsh-native-tool-pipeline",
+  "model_calls": 0,
+  "records": [
+    {
+      "arm": "raw",
+      "passed": true,
+      "lossless_tool_render": true,
+      "only_fixture_tool_visible": true,
+      "cases": 12
+    },
+    {
+      "arm": "text-dedup",
+      "passed": true,
+      "lossless_tool_render": true,
+      "only_fixture_tool_visible": true,
+      "cases": 12
+    },
+    {
+      "arm": "lineage",
+      "passed": true,
+      "lossless_tool_render": true,
+      "only_fixture_tool_visible": true,
+      "cases": 12
+    }
+  ]
+}
