@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-11-12T04:27:37.028Z",
+  "created_utc": "2026-11-12T04:36:37.862Z",
   "plugin_version": "0.1.0",
   "plugin_source_commit": "3406417cfcec0a6950795302a0a28ef7c1dc55cb",
   "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
@@ -85,9 +85,9 @@
     }
   ],
   "hashes": {
-    "experiments/origins/PROTOCOL.md": "296c4e604c133a59ec0a7bc788b93199cba5598c664e7e7b3d3af562cc4a3226",
-    "experiments/origins/packet-plugin.mjs": "942ebf813fcbf9aef27ee0dfabc2e4da8390675f798977ae6c5822692c371110",
-    "scripts/origin-eval.mjs": "847d5dd6f2e2eacfe97f69f185c21ea2585fa84402124ba0e78016f610b69fed",
+    "experiments/origins/PROTOCOL.md": "efccb602d50fe057f8afed63755e97afc82cd51b73e1709d7f5578d0b0a7175b",
+    "experiments/origins/packet-plugin.mjs": "c12610c7fd93a52cb3b591c01b60a6d09c2d2066631c5a6385d767f6315df4cc",
+    "scripts/origin-eval.mjs": "20b9634cace487d314752947b7cb45aba5ef26f8449bfa091955f25e6de5da98",
     "src/store.ts": "6165eefde44367f701eefd742e599b9684df7bd11aef5015cd028466693bd75c",
     "lib/store.js": "0e85e58681818e08da25a6171c75f294112b24f40c537d3aa67cd5851ff53278"
   },
@@ -129,5 +129,7 @@
       "bytes": 115086
     }
   },
-  "task_sha256": "5a64184161f6493438f0369d04ada0a8753a4f1c01fe13a78005ff043d158898"
+  "task_sha256": "e2d6f8ebd1ffc036149adbdaca50be09dbd3d62170b4c0ceec766e035f8949a6",
+  "transport_revision": 2,
+  "transport_note": "One complete case per call; identical corpus and gold. Invalid unpaged attempts preserved separately."
 }

@@ -1,0 +1,15 @@
+{
+  "reason": null,
+  "text": "",
+  "observed_tool_calls": [
+    "origin_packet",
+    "origin_packet",
+    "origin_packet",
+    "origin_packet",
+    "origin_packet",
+    "origin_packet",
+    "origin_packet",
+    "origin_packet"
+  ],
+  "packet_sha256": "e1118495b6ca904508b816a13c9085cc06235ccd2cdd53156532f3e9924f1ec2"
+}

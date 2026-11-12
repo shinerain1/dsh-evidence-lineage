@@ -4,7 +4,7 @@
       "mode": "native",
       "arm": "raw",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     },
@@ -12,7 +12,7 @@
       "mode": "native",
       "arm": "text-dedup",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     },
@@ -20,7 +20,7 @@
       "mode": "native",
       "arm": "lineage",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     },
@@ -28,7 +28,7 @@
       "mode": "ptc",
       "arm": "raw",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     },
@@ -36,7 +36,7 @@
       "mode": "ptc",
       "arm": "text-dedup",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     },
@@ -44,7 +44,7 @@
       "mode": "ptc",
       "arm": "lineage",
       "lossless": true,
-      "cases": 6,
+      "pages": 6,
       "actual_dsh_pipeline": true,
       "model_calls": 0
     }

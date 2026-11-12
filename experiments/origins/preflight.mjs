@@ -24,11 +24,14 @@ for(const mode of ['native','ptc'])for(const arm of ['raw','text-dedup','lineage
     }else await mountAgentLoopTestDependencies(ctx,{tools:{mode}})
     const harness=await mountAgentLoopTestHarness(ctx);await ctx.plugin(Packet,{packetPath:join(root,`${mode}-107-${arm}`,'packet.json')})
     const agent=await harness.create(`preflight-${mode}-${arm}`,{}, {cwd:directory})
-    const call=mode==='native'?{type:'tool-call',id:'read',name:'origin_packet',arguments:'{}'}:{type:'tool-call',id:'read',name:'run_code',arguments:JSON.stringify({code:'return await tools.origin_packet({});',description:'Verify source-tracing transport',timeoutMs:30000})}
-    const batch=await ctx.tools.execute({agent,calls:[call],signal:AbortSignal.timeout(45000)}),r=batch.results[0].result
-    assert.equal(r.isError,false,JSON.stringify(r));const value=mode==='native'?r.value:r.value.result
-    assert.equal(digest(canonical(value)),manifest.packet_hashes[`${arm}-107`].sha256)
-    records.push({mode,arm,lossless:true,cases:value.cases.length,actual_dsh_pipeline:true,model_calls:0})
+    const packet=JSON.parse(await readFile(join(root,`${mode}-107-${arm}`,'packet.json'),'utf8'))
+    for(const c of packet.cases){
+      const call=mode==='native'?{type:'tool-call',id:'read-'+c.id,name:'origin_packet',arguments:JSON.stringify({case_id:c.id})}:{type:'tool-call',id:'read-'+c.id,name:'run_code',arguments:JSON.stringify({code:`return await tools.origin_packet({case_id:'${c.id}'});`,description:'Verify source-tracing transport',timeoutMs:30000})}
+      const batch=await ctx.tools.execute({agent,calls:[call],signal:AbortSignal.timeout(45000)}),r=batch.results[0].result
+      assert.equal(r.isError,false,JSON.stringify(r));const value=mode==='native'?r.value:r.value.result
+      assert.equal(digest(canonical(value)),digest(canonical({format:packet.format,cases:[c]})))
+    }
+    records.push({mode,arm,lossless:true,pages:6,actual_dsh_pipeline:true,model_calls:0})
   }finally{await ctx.fiber.dispose()}
 }
 await writeFile(join(repo,'docs/results/origins/preflight.json'),JSON.stringify({records},null,2)+'\n')

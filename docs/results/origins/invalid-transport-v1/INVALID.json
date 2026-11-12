@@ -1,0 +1,258 @@
+{
+  "valid_for_accuracy": false,
+  "reason": "Oversized Native result was retained head/tail by DSH spill-policy. Full result was recoverable via a spill file, but this experiment disabled file tools. Input delivery was therefore incomplete. It is an experiment interface error, not evidence of DSH reasoning failure or plugin gain.",
+  "reproduction_commit": "f61c005",
+  "repair": "Return one complete case per origin_packet call for ALL arms. Keep corpus, gold, model, budgets and scoring. Rerun the full plan under new transport; retain all original observations.",
+  "runs": [
+    {
+      "id": "native-107-raw",
+      "status": "completion_limit",
+      "timing": {
+        "id": "native-107-raw",
+        "arm": "raw",
+        "seed": 107,
+        "mode": "native",
+        "exit_code": 1,
+        "stopped_by_runner": "completion_limit",
+        "elapsed_seconds": 84.152
+      },
+      "usage": {
+        "inputTokens": 99326,
+        "outputTokens": 3081,
+        "cacheReadTokens": 313856,
+        "cacheWriteTokens": 0,
+        "totalTokens": 416263
+      },
+      "observed_tool_calls": 8,
+      "observations": [
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "81d4be3082fc8e0401e1963e27de78d360b44f5ede23069d408574e4b788ae75"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "2b83504a86abb300806f836431b1318d97a87f49e490664259046ecf953a088c"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "cbd59ca0b4d7b2a17800759e0065389cd0eee249f29ae840011492b06c4d9d0a"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "15a1aa074486a56cf30da519a8f32ce337f101613c8bcfe8a019bb0f9d6c48e6"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "8c4ab5ac14c8d8ff1b3f0a3bc9cbf7caedc3ee112616f9a2e1d6f68132f2ffc5"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "bb089ecaa87e050b3d39fc8969443200e794df6724973abe5135d1b240537b5a"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "9e3c1d0a1c3e01c9274b6efd55b235b5042afd4c44357eaf2e90882f0f8c3b75"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "11a499282bdb2cce0545a5184df275d2ecebc6efe640c53cfbffb7e0e3e743f3"
+        }
+      ],
+      "session_log_sha256": "a3c4a9782ae77c514476e9dec9872174d64040946a0b411f419f0f9aabb000ef"
+    },
+    {
+      "id": "native-107-text-dedup",
+      "status": "completion_limit",
+      "timing": {
+        "id": "native-107-text-dedup",
+        "arm": "text-dedup",
+        "seed": 107,
+        "mode": "native",
+        "exit_code": 1,
+        "stopped_by_runner": "completion_limit",
+        "elapsed_seconds": 39.359
+      },
+      "usage": {
+        "inputTokens": 85891,
+        "outputTokens": 4374,
+        "cacheReadTokens": 309376,
+        "cacheWriteTokens": 0,
+        "totalTokens": 399641
+      },
+      "observed_tool_calls": 8,
+      "observations": [
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "83cf2135de684743eb918ad32a3766e1088c41ba80c1475c49223b401b783ad8"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "d72efcb8602c0e47f3cbbca141b13511d033ac17d04aabc08712e722b8ad77ab"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "a8bd02d2efc4caea26e0a434c519715c47f1724315d0ef0bb2c06ab755c31593"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "2836346f501271fa4cb5f0cea0fd6f71f303b8fecb5c3825e77743947bf08168"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "6ba5916d9f43556135dea62d637d6ee4215a6b505a1e321d9eeadd9dd6fbaee3"
+        },
+        {
+          "retained_chars": 30,
+          "valid_json": false,
+          "has_omission_marker": false,
+          "retained_sha256": "d625bbb6b9e6995a93c0f87b8230dcd07d65d82f7f60fe12e99be4ea61ef0ce0"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "a40ac5e763df2cb8b15b6cd1fef2a7616411cff71e0c8a342538ffdc56805546"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "aa60074076a585f14eec772938ccacca9ef417f1fddd8dbcf5f183784f1e0b85"
+        }
+      ],
+      "session_log_sha256": "9b65cfa189e306772b88539a7182101df424c238d1e689d3fc51680e41cfed0d"
+    },
+    {
+      "id": "native-107-lineage",
+      "status": "completion_limit",
+      "timing": {
+        "id": "native-107-lineage",
+        "arm": "lineage",
+        "seed": 107,
+        "mode": "native",
+        "exit_code": 1,
+        "stopped_by_runner": "completion_limit",
+        "elapsed_seconds": 36.286
+      },
+      "usage": {
+        "inputTokens": 104935,
+        "outputTokens": 4050,
+        "cacheReadTokens": 334592,
+        "cacheWriteTokens": 0,
+        "totalTokens": 443577
+      },
+      "observed_tool_calls": 8,
+      "observations": [
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "728bbfcba222a3a67ec79b5871f032ec0d507ff864250cb6bb3db000600d350a"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "4746a8874c34152860ed4ba7ec39cfb6baf2b4efaf1e4b3620dd03cf5c478c8a"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "5cba5772a11549eaa404ee12d8710b761690b09844faaeeab4b41bef2a23b258"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "e6e14686fe520ccb89bf6b8471b8ea1f9c9d0dc8200b9bde1fffd28ebd27a85e"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "a6955c4fe7e388620855d6614866365353a433899481b5ac1e8ee37438d2c4e1"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "e65d976f97797b2c02e1d81d6cc891916c22fab8076adda42d91d4e8f7524d2d"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "883e50cab5157d8a6ad430e78ba43ef26b838eaf0cd1590cab3f780fcd91aa47"
+        },
+        {
+          "retained_chars": 49929,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "eee9fd5fa7c7125d41bda45cb3f562d9f64db613d9bd545a5056be2b7dcf3bb3"
+        }
+      ],
+      "session_log_sha256": "39df19c79cd879e17d14cca29a580b22207d8de2872a8848ee0aee0ef0dc185a"
+    },
+    {
+      "id": "native-211-text-dedup",
+      "status": "cancelled_after_transport_defect_found",
+      "timing": null,
+      "usage": {
+        "inputTokens": 29306,
+        "outputTokens": 2299,
+        "cacheReadTokens": 18304,
+        "cacheWriteTokens": 0,
+        "totalTokens": 49909
+      },
+      "observed_tool_calls": 3,
+      "observations": [
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "385c83a5b71f19b2edcc32da86ab689c84d336d2dd720398ab4d19a5bc0a377b"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "64209d9fe04a4f3919fc44e1228006f599d30579b6c0fa273861cb56157e8779"
+        },
+        {
+          "retained_chars": 49933,
+          "valid_json": false,
+          "has_omission_marker": true,
+          "retained_sha256": "75bf3fb05f929729def3f3bf484fcedc6fcd2a65c4dd7d5f906ca2aca7271e83"
+        }
+      ],
+      "session_log_sha256": "b0cdeb64b99548844d33b3f21cb1b3ebfd43c0ec2649e687c8fa3156228b7adb"
+    }
+  ]
+}
