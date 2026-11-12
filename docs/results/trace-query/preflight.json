@@ -1,0 +1,52 @@
+{
+  "records": [
+    {
+      "mode": "native",
+      "arm": "raw",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    },
+    {
+      "mode": "native",
+      "arm": "lineage",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    },
+    {
+      "mode": "native",
+      "arm": "trace",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    },
+    {
+      "mode": "ptc",
+      "arm": "raw",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    },
+    {
+      "mode": "ptc",
+      "arm": "lineage",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    },
+    {
+      "mode": "ptc",
+      "arm": "trace",
+      "lossless": true,
+      "pages": 6,
+      "actual_dsh_pipeline": true,
+      "model_calls": 0
+    }
+  ]
+}

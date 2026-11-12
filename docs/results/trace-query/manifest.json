@@ -1,0 +1,169 @@
+{
+  "created_utc": "2026-11-12T04:53:18.927Z",
+  "plugin_version": "0.2.0",
+  "plugin_source_commit": "801f14895e0bf68a2f160a073195ba2014ea5fd3",
+  "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
+  "model": "deepseek-official/deepseek-flash",
+  "reasoning": "low",
+  "max_tokens": 16384,
+  "deadline_seconds": 300,
+  "unique_cases": 6,
+  "materials": 192,
+  "queries_per_case": 4,
+  "plans": [
+    {
+      "arm": "raw",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-lineage"
+    },
+    {
+      "arm": "trace",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-trace"
+    },
+    {
+      "arm": "lineage",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-lineage"
+    },
+    {
+      "arm": "trace",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-trace"
+    },
+    {
+      "arm": "raw",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-raw"
+    },
+    {
+      "arm": "trace",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-trace"
+    },
+    {
+      "arm": "raw",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-lineage"
+    },
+    {
+      "arm": "raw",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-lineage"
+    },
+    {
+      "arm": "trace",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-trace"
+    },
+    {
+      "arm": "lineage",
+      "seed": 211,
+      "mode": "ptc",
+      "id": "ptc-211-lineage"
+    },
+    {
+      "arm": "trace",
+      "seed": 211,
+      "mode": "ptc",
+      "id": "ptc-211-trace"
+    },
+    {
+      "arm": "raw",
+      "seed": 211,
+      "mode": "ptc",
+      "id": "ptc-211-raw"
+    },
+    {
+      "arm": "trace",
+      "seed": 307,
+      "mode": "ptc",
+      "id": "ptc-307-trace"
+    },
+    {
+      "arm": "raw",
+      "seed": 307,
+      "mode": "ptc",
+      "id": "ptc-307-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 307,
+      "mode": "ptc",
+      "id": "ptc-307-lineage"
+    }
+  ],
+  "hashes": {
+    "experiments/trace-query/PROTOCOL.md": "e0e41b1c5767a6de5e929ac5476e2a9d251c38b73bd0cc0bad04c4f106728cc5",
+    "experiments/trace-query/packet-plugin.mjs": "c12610c7fd93a52cb3b591c01b60a6d09c2d2066631c5a6385d767f6315df4cc",
+    "scripts/trace-eval.mjs": "371b87415bb1389547d0ca6b87e9217dc2864cc80b8a81c1ba16d5537505bbd0",
+    "src/store.ts": "c0ec7a716c84c45f2c57e784b393b38919b25a0ac7213dd2f499d84feb52c9d0",
+    "lib/store.js": "761ccc386ba64a2b87f317e741b21d226bd4014fe12eee70da25341fe69dc8f5"
+  },
+  "packet_hashes": {
+    "raw-107": {
+      "sha256": "e1118495b6ca904508b816a13c9085cc06235ccd2cdd53156532f3e9924f1ec2",
+      "bytes": 88156
+    },
+    "lineage-107": {
+      "sha256": "839b9b2b483aa8459bb18e37d3938957c209fbb87d178de18757feb6926393cc",
+      "bytes": 115086
+    },
+    "trace-107": {
+      "sha256": "eb4fc0a6b04499ec5fbbb034945b769c23edcb8e899997dc7bee41f19ca93b6d",
+      "bytes": 6597
+    },
+    "raw-211": {
+      "sha256": "3e8bdc09bbc987055246f5d3efd873d432f54be8b6b746829c33e9cd8445e4f9",
+      "bytes": 88156
+    },
+    "lineage-211": {
+      "sha256": "3fa0bd9826f187ce73a4e7e71baffd1e4dfc9625fb733676a0f0b02c77c44d2d",
+      "bytes": 115086
+    },
+    "trace-211": {
+      "sha256": "bcdb1c46ba76d4d289fd83fb16292b08c8286c1388c5ecd0df82b911fe5aff26",
+      "bytes": 6597
+    },
+    "raw-307": {
+      "sha256": "471b741c4ea939e17eb64c457e8b23c801e5cccf2d9e7825015fa17791bb8088",
+      "bytes": 88156
+    },
+    "lineage-307": {
+      "sha256": "681297a307d9c22be45909ee12a9bf2d5905a94a67cce51429a6e05c3d756d58",
+      "bytes": 115086
+    },
+    "trace-307": {
+      "sha256": "ca9f13bbfc94497dfb0c7803236b9b14a3829e24c5477b5ad694dc6407d30cbd",
+      "bytes": 6597
+    }
+  },
+  "task_sha256": "0c7b16f5e42543a841c73929a38f211ccbf24db6656da9cd2a019e143eef542b"
+}

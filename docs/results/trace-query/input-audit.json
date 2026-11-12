@@ -1,0 +1,63 @@
+{
+  "valid": true,
+  "all_baseline_inputs_unchanged": true,
+  "gold_and_corpus_unchanged": true,
+  "trace_memberships_exact": true,
+  "frozen_files_unchanged": true,
+  "rows": [
+    {
+      "seed": 107,
+      "arm": "raw",
+      "verified": true,
+      "bytes": 88156
+    },
+    {
+      "seed": 107,
+      "arm": "lineage",
+      "verified": true,
+      "bytes": 115086
+    },
+    {
+      "seed": 107,
+      "arm": "trace",
+      "verified": true,
+      "bytes": 6597
+    },
+    {
+      "seed": 211,
+      "arm": "raw",
+      "verified": true,
+      "bytes": 88156
+    },
+    {
+      "seed": 211,
+      "arm": "lineage",
+      "verified": true,
+      "bytes": 115086
+    },
+    {
+      "seed": 211,
+      "arm": "trace",
+      "verified": true,
+      "bytes": 6597
+    },
+    {
+      "seed": 307,
+      "arm": "raw",
+      "verified": true,
+      "bytes": 88156
+    },
+    {
+      "seed": 307,
+      "arm": "lineage",
+      "verified": true,
+      "bytes": 115086
+    },
+    {
+      "seed": 307,
+      "arm": "trace",
+      "verified": true,
+      "bytes": 6597
+    }
+  ]
+}
