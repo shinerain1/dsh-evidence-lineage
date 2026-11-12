@@ -1,0 +1,68 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_CoaC2Ua4yu6zIB1MMsdx8716",
+      "tool": "run_code",
+      "input": {
+        "description": "Fetch all six origin packet cases",
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  const c = r.packet?.cases?.[0];\n  console.log(JSON.stringify({id: c.id, query_ids: c.query_ids, keys: Object.keys(c.evidence||{})}));\n}\nreturn results.map(r=>r.packet);\n"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_wqBFQFR5AZahgtrc0ATh3570",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst r = await tools.origin_packet({case_id: \"G01\"});\nconsole.log(JSON.stringify(r).slice(0,3000));\n",
+        "description": "Inspect origin packet response shape"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_ljuWt3nvoTT6rD9ZaN392704",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  const c = r.cases[0];\n  console.log(\"====\", c.id, \"query\", c.query_ids);\n  console.log(\"evidence keys\", Object.keys(c.evidence));\n  console.log(\"recorded_origin_count\", c.recorded_origin_count, c.evidence.recorded_origin_count);\n  console.log(\"mat count\", c.evidence.material_index?.length, \"links\", c.evidence.links?.length, \"items\", c.evidence.items?.length);\n  console.log(\"sample mat\", JSON.stringify(c.evidence.material_index?.[0]));\n  console.log(\"sample link\", JSON.stringify(c.evidence.links?.[0]));\n  console.log(\"alias items\", JSON.stringify(c.evidence.items?.filter(i=>i.aliases?.length).slice(0,2)));\n}\nreturn \"ok\";\n",
+        "description": "Summarize structure of all six cases"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_zi2TB5AONXlvexc1Ygyi2374",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  const c = r.cases[0];\n  console.log(\"=====\", c.id);\n  console.log(\"method:\", JSON.stringify(c.evidence.method));\n  console.log(\"notice:\", JSON.stringify(c.evidence.notice));\n  console.log(\"items origins fields:\", c.evidence.items.map(i=>({id:i.id, origins:i.origins})).filter(x=>x.origins));\n  // links whose child/parent not in material index ids\n  const mids = new Set(c.evidence.material_index.map(m=>m.id));\n  const bad = c.evidence.links.filter(l=>!mids.has(l.child)||!mids.has(l.parent));\n  console.log(\"bad links\", bad.length, JSON.stringify(bad.slice(0,3)));\n  console.log(\"relations\", [...new Set(c.evidence.links.map(l=>l.relation))]);\n}\nreturn \"ok\";\n",
+        "description": "Inspect method, precomputed origins, link integrity"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_BFJs1fDQWJkUkCqdAY2I6881",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nconst out = [];\nfor (const r of results) {\n  const c = r.cases[0];\n  const ev = c.evidence;\n  const src = new Map(ev.material_index.map(m=>[m.id, m.source_id]));\n  const parents = new Map();\n  for (const id of src.keys()) parents.set(id, []);\n  for (const l of ev.links) if (l.relation === \"derivation\") parents.get(l.child)?.push(l.parent);\n  // detect cycles via DFS\n  const state = new Map(); // 0 unvisited 1 visiting 2 done\n  const cyc = [];\n  const memo = new Map();\n  function resolve(id, stack=[]) {\n    if (memo.has(id)) return memo.get(id);\n    if (state.get(id)===1) { cyc.push([...stack,id]); return new Set([src.get(id)]); }\n    state.set(id,1);\n    const ps = parents.get(id)||[];\n    let res;\n    if (ps.length===0) res = new Set([src.get(id)]);\n    else { res = new Set(); for (const p of ps) for (const s of resolve(p,[...stack,id])) res.add(s); }\n    state.set(id,2);\n    memo.set(id,res);\n    return res;\n  }\n  for (const id of src.keys()) resolve(id);\n  const union = new Set();\n  for (const id of src.keys()) for (const s of memo.get(id)) union.add(s);\n  const q = c.query_ids.map(id=>({material_id:id, origins:[...memo.get(id)].sort()}));\n  console.log(\"====\", c.id, \"mats\", src.size, \"union\", union.size, \"cycles\", cyc.length, \"leafCount\", [...src.keys()].filter(id=>(parents.get(id)||[]).length===0).length);\n  console.log(\"leaf source ids\", JSON.stringify([...src.keys()].filter(id=>(parents.get(id)||[]).length===0).map(id=>src.get(id)).sort()));\n  console.log(\"union\", JSON.stringify([...union].sort()));\n  console.log(\"queries\", JSON.stringify(q));\n  out.push({id:c.id, recorded_origin_count:union.size, independence:\"unknown\", queries:q});\n}\nreturn out;\n",
+        "description": "Compute transitive origins and counts for all cases"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_hPJk5HocqhypVQRU6LLa8984",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  const c = r.cases[0]; const ev=c.evidence;\n  const src = new Map(ev.material_index.map(m=>[m.id,m.source_id]));\n  const parents = new Map([...src.keys()].map(id=>[id,[]]));\n  for (const l of ev.links) if(l.relation===\"derivation\") parents.get(l.child)?.push(l.parent);\n  console.log(\"====\",c.id);\n  for(const q of c.query_ids){\n    // print ancestry tree depth limited\n    function tree(id,d=0,seen=new Set()){ if(d>7||seen.has(id)) return \"...\"; const ps=parents.get(id)||[]; const s=src.get(id); return ps.length? `${id}(${s}) -> [`+ps.map(p=>tree(p,d+1,new Set([...seen,id]))).join(\", \")+`]` : `${id}(${s})`; }\n    console.log(tree(q));\n  }\n}\nreturn \"ok\";\n",
+        "description": "Print derivation ancestry for all query materials"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_RyzRNF3fpjfbe8rejWPg4648",
+      "tool": "run_code",
+      "input": {
+        "code": "\nconst ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  const c = r.cases[0]; const ev=c.evidence;\n  const src = new Map(ev.material_index.map(m=>[m.id,m.source_id]));\n  const parents = new Map([...src.keys()].map(id=>[id,[]]));\n  for (const l of ev.links) if(l.relation===\"derivation\") parents.get(l.child)?.push(l.parent);\n  function leaves(id){ const out=new Set(); const stack=[id]; const seen=new Set(); while(stack.length){const x=stack.pop(); if(seen.has(x))continue; seen.add(x); const ps=parents.get(x)||[]; if(!ps.length)out.add(src.get(x)); else stack.push(...ps);} return out; }\n  console.log(\"====\",c.id);\n  console.log(\"roots\", JSON.stringify([...src.keys()].filter(id=>!(parents.get(id)||[]).length).map(id=>({id,s:src.get(id)}))));\n  console.log(\"queries\", JSON.stringify(c.query_ids.map(q=>({q, leaves:[...leaves(q)].sort()}))));\n  const all=new Set(); for(const id of src.keys()) for(const s of leaves(id)) all.add(s);\n  console.log(\"allDistinct\", all.size, JSON.stringify([...all].sort()));\n}\nreturn \"ok\";\n",
+        "description": "Validate with independent iterative leaf traversal"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

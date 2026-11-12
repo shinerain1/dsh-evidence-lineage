@@ -108,6 +108,28 @@ export function project(doc: Case, args: Input = {}) {
   }
 }
 
+/** Page source memberships without repeating source bodies or the full graph. */
+export function trace(doc: Case, args: Input) {
+  const ids = [...new Set(list(args.evidence_ids, 20).map(id => find(doc, id).id))]
+  const roots = ancestry(doc)
+  const entries = ids.flatMap(evidence_id => roots.get(evidence_id)!.map(source_id => ({ evidence_id, source_id })))
+  const offset = integer(args.offset, 0, 40000)
+  const limit = integer(args.limit, 100, 200)
+  if (!limit) throw new Error('LIMIT_MUST_BE_POSITIVE')
+  const page = entries.slice(offset, offset + limit)
+  return {
+    case_id: doc.id, revision: doc.revision, notice: NOTICE,
+    material_count: doc.nodes.length,
+    recorded_origin_count: new Set([...roots.values()].flat()).size,
+    independence: 'unknown' as const,
+    lineage_basis: 'recorded references; conditional on supplied derivation assertions',
+    query_ids: ids, total_origin_pairs: entries.length, entries: page,
+    next_offset: offset + page.length < entries.length ? offset + page.length : null,
+    complete: offset === 0 && page.length === entries.length,
+    guidance: 'Source memberships only; recorded_origin_count covers the entire case. Read all pages. Use evidence_get for original text and links; this result does not establish truth or independence.',
+  }
+}
+
 export class Store {
   readonly db: DatabaseSync
   constructor(root: string) {

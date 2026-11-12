@@ -1,0 +1,41 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_05ac4OqpWUnw4mzJ1jWH5687",
+      "tool": "run_code",
+      "input": {
+        "description": "Fetch all six origin packets",
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst out = {};\nfor (const id of ids) {\n  out[id] = await tools.origin_packet({ case_id: id });\n}\nconsole.log(JSON.stringify(out).slice(0, 500));\nreturn out;"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_VB9SGcOAWzUDA5DfZFfn3479",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = {};\nfor (const id of ids) packets[id] = await tools.origin_packet({ case_id: id });\n\nconst result = [];\nfor (const id of ids) {\n  const c = packets[id].cases[0];\n  const ev = c.evidence;\n  const src = new Map();\n  for (const m of ev.material_index) src.set(m.id, m.source_id);\n  const parents = new Map();\n  for (const l of (ev.links || [])) {\n    if (l.relation !== \"derivation\") continue;\n    if (!parents.has(l.child)) parents.set(l.child, []);\n    parents.get(l.child).push(l.parent);\n  }\n  const memo = new Map();\n  const origins = (m, stack = new Set()) => {\n    if (memo.has(m)) return memo.get(m);\n    if (stack.has(m)) return [];\n    const ps = parents.get(m);\n    let out;\n    if (!ps || ps.length === 0) {\n      out = new Set([src.get(m)]);\n    } else {\n      out = new Set();\n      const ns = new Set(stack); ns.add(m);\n      for (const p of ps) for (const o of origins(p, ns)) out.add(o);\n    }\n    memo.set(m, out);\n    return out;\n  };\n  const all = new Set();\n  for (const m of ev.material_index) for (const o of origins(m.id)) if (o) all.add(o);\n  const queries = c.query_ids.map(q => ({ material_id: q, origins: [...origins(q)].filter(Boolean).sort() }));\n  result.push({ id: c.id, recorded_origin_count: all.size, independence: \"unknown\", queries });\n}\nreturn JSON.stringify({ cases: result });",
+        "description": "Compute transitive origin source IDs for all six cases"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_hs750jJvawwgMFg4ktXs2076",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nfor (const id of ids) {\n  const c = (await tools.origin_packet({ case_id: id })).cases[0];\n  const ev = c.evidence;\n  console.log(id, \"query_ids:\", c.query_ids.join(\",\"));\n  console.log(\"  top-level case keys:\", Object.keys(c).join(\",\"));\n  console.log(\"  evidence keys:\", Object.keys(ev).join(\",\"));\n  console.log(\"  items:\", ev.items.length, \"index:\", ev.material_index.length, \"links:\", ev.links.length);\n  const withAlias = ev.items.filter(i => i.aliases || i.origins || i.alias_of);\n  if (withAlias.length) console.log(\"  items with alias/origins:\", JSON.stringify(withAlias.slice(0,5)));\n  const rels = {};\n  for (const l of ev.links) rels[l.relation] = (rels[l.relation]||0)+1;\n  console.log(\"  relations:\", JSON.stringify(rels));\n  if (c.recorded_origin_count !== undefined) console.log(\"  recorded_origin_count:\", c.recorded_origin_count);\n  if (ev.recorded_origin_count !== undefined) console.log(\"  ev.recorded_origin_count:\", ev.recorded_origin_count);\n}",
+        "description": "Inspect packet structure and precomputed fields"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_Xh90mgeIHefGidIFQ9n13164",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nfor (const id of ids) {\n  const c = (await tools.origin_packet({ case_id: id })).cases[0];\n  const ev = c.evidence;\n  const src = new Map(ev.material_index.map(m => [m.id, m.source_id]));\n  const allIds = new Set(src.keys());\n  const parents = new Map();\n  const missing = [];\n  for (const l of ev.links) {\n    if (l.relation !== \"derivation\") continue;\n    if (!allIds.has(l.child) || !allIds.has(l.parent)) missing.push(l.child+\">\"+l.parent);\n    if (!parents.has(l.child)) parents.set(l.child, []);\n    parents.get(l.child).push(l.parent);\n  }\n  // fixed point iteration to handle cycles\n  const acc = new Map([...allIds].map(m => [m, new Set()]));\n  for (const m of allIds) if (!parents.get(m) || parents.get(m).length === 0) acc.get(m).add(src.get(m));\n  let changed = true, iter = 0;\n  while (changed && iter < 200) {\n    changed = false; iter++;\n    for (const m of allIds) {\n      const ps = parents.get(m) || [];\n      for (const p of ps) for (const o of acc.get(p)) if (!acc.get(m).has(o)) { acc.get(m).add(o); changed = true; }\n    }\n  }\n  const all = new Set();\n  for (const s of acc.values()) for (const o of s) all.add(o);\n  console.log(id, \"count:\", all.size, \"missingRefs:\", missing.length, \"iters:\", iter, \"selfloop:\", [...parents].filter(([k,v])=>v.includes(k)).length);\n  for (const q of c.query_ids) console.log(\"   \", q, JSON.stringify([...acc.get(q)].sort()));\n}",
+        "description": "Recompute with fixed-point traversal and validate references"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

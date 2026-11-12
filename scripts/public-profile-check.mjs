@@ -23,17 +23,18 @@ try{
   await mountAgentLoopTestDependencies(ctx,{tools:{mode:'native'}})
   const harness=await mountAgentLoopTestHarness(ctx);const agent=await harness.create('installed-native-check')
   const mounted=ctx.plugin(Plugin,Plugin.Config({root:resolve(profileDir,'../../validation-store')}));await mounted
-  assert.equal(ctx.tools.schemas(agent).filter(t=>t.name.startsWith('evidence_')).length,10)
+  assert.equal(ctx.tools.schemas(agent).filter(t=>t.name.startsWith('evidence_')).length,11)
   const call=async(name,args={})=>{const b=await ctx.tools.execute({agent,calls:[{type:'tool-call',id:'public-'+ ++calls,name,arguments:JSON.stringify(args)}],signal:AbortSignal.timeout(30000)});const r=b.results[0].result;assert.equal(r.isError,false,JSON.stringify(r));return r.value}
   const p=await call('evidence_case_create',{name:'Installed tarball'})
   const input=await call('evidence_ingest',{case_id:p.case_id,records:[{url:'https://one.example/',text:'A source observation.'},{url:'https://two.example/',text:'A source observation.'}]})
   const initial=await call('evidence_context',{case_id:p.case_id});assert.equal(initial.folded_count,0)
   const report=await call('evidence_report',{case_id:p.case_id,format:'dsh-evidence-report/v1',items:[{text:'A source observation.',refs:[input.result.ids[0]],novelty:'derived'}]})
   const current=await call('evidence_context',{case_id:p.case_id});assert.equal(current.folded_count,1);assert.equal(current.recorded_origin_count,2)
+  const traced=await call('evidence_trace',{case_id:p.case_id,evidence_ids:report.result.ids,limit:1});assert.equal(traced.complete,true);assert.equal(traced.recorded_origin_count,2);assert.equal(traced.entries.length,1);
   const receipt=await call('evidence_export',{case_id:p.case_id});assert.equal(receipt.checked.valid,true)
   const bundle=JSON.parse(await readFile(receipt.path,'utf8'));assert.equal(bundle.case.nodes.length,3)
   await mounted.dispose();assert.equal(ctx.tools.schemas(agent).filter(t=>t.name.startsWith('evidence_')).length,0)
-  const result={kind:'installed-tarball-actual-dsh-profile-native-tools',sdk_peers_from_host:true,tools:10,native_calls:calls,unknown_equal_text_preserved:true,report_folded_with_retrievable_origin:true,export_verified:true,unload:true,model_calls:0}
+  const result={kind:'installed-tarball-actual-dsh-profile-native-tools',sdk_peers_from_host:true,tools:11,trace_checked:true,native_calls:calls,unknown_equal_text_preserved:true,report_folded_with_retrievable_origin:true,export_verified:true,unload:true,model_calls:0}
   if(process.env.EVIDENCE_VALIDATION_OUTPUT)await writeFile(process.env.EVIDENCE_VALIDATION_OUTPUT,JSON.stringify(result,null,2)+'\n')
   console.log(JSON.stringify(result))
 }finally{await ctx.fiber.dispose()}

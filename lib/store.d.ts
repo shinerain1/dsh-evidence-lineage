@@ -79,6 +79,25 @@ export declare function project(doc: Case, args?: Input): {
     complete: boolean;
     guidance: string;
 };
+/** Page source memberships without repeating source bodies or the full graph. */
+export declare function trace(doc: Case, args: Input): {
+    case_id: string;
+    revision: number;
+    notice: string;
+    material_count: number;
+    recorded_origin_count: number;
+    independence: "unknown";
+    lineage_basis: string;
+    query_ids: string[];
+    total_origin_pairs: number;
+    entries: {
+        evidence_id: string;
+        source_id: string;
+    }[];
+    next_offset: number | null;
+    complete: boolean;
+    guidance: string;
+};
 export declare class Store {
     readonly db: DatabaseSync;
     constructor(root: string);

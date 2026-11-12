@@ -1,0 +1,513 @@
+{
+  "valid": true,
+  "checked_runs": 12,
+  "completed_runs": 12,
+  "unique_cases": 6,
+  "independent_scorer_matches": true,
+  "rows": [
+    {
+      "id": "native-107-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-107-text-dedup",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-107-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-text-dedup",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-text-dedup",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-text-dedup",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    }
+  ]
+}

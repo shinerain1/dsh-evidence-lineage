@@ -8,6 +8,8 @@
 
 ## 已实现
 
+- `evidence_trace`：只查询指定材料的来源对应项，按最多 200 项分页；无需为来源记账重复读取全部正文和引用图。
+
 - 一种搜索入口：`evidence_search` 调用 DSH 自身的 `ctx.web.search`，沿用当前搜索供应商、登录与取消信号。重复检索的已有正文返回 ID，避免再次铺满输出。
 - 一种 Agent 汇报协议：`dsh-evidence-report/v1`，每条汇报携带引用 ID、是否增加新观察、立场；Session、调用 ID 和可用的父 Session 身份由 DSH 提供。
 - 来源 URL、不可变材料 ID、SHA-256 正文指纹、逐项引用图。**同文字、不同网址且没有来源依据时不合并。**
@@ -64,6 +66,8 @@ npm run dsh:check
 ```
 
 联网模型试验是可选项，会使用本机已有 DSH 登录及模型额度，不在 `npm test` 或 CI 中自动运行。具体协议见实验报告。
+
+研究依据、实际实现及未实现的论文算法见 [方法来源](docs/METHOD-SOURCES.md)；来源追溯对照见 [实验报告](docs/ORIGIN-EXPERIMENT.md)。
 
 本项目参考 [W3C PROV](https://www.w3.org/TR/prov-o/)、[trungdong/prov](https://github.com/trungdong/prov) 与 [ekzhu/datasketch](https://github.com/ekzhu/datasketch)。标准来源图、哈希去重和相似性检索都是已有技术；本项目贡献是 DSH 工作流适配与可验证实现，不宣称生态首创。详细取舍见 [设计说明](docs/DESIGN.md)。
 

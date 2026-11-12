@@ -1,0 +1,4 @@
+{
+  "calls": [],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

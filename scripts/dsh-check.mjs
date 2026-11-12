@@ -43,8 +43,10 @@ try {
     await tools.evidence_link({case_id:p.case_id,child:ids[1],parent:ids[0],relation:'derivation',note:'Fixture truth: second page is an exact reprint',expected_revision:v.revision});
     const report=await tools.evidence_report({case_id:p.case_id,format:'dsh-evidence-report/v1',items:[{text:'A controlled experiment observed an effect.',refs:[ids[1]],novelty:'derived'}]});
     const context=await tools.evidence_context({case_id:p.case_id});
+    const traced=await tools.evidence_trace({case_id:p.case_id,evidence_ids:[ids[1]],limit:1});
     const exported=await tools.evidence_export({case_id:p.case_id});
-    return {case_id:p.case_id,context,exported,report,repeat_materials:b.new_materials.length,replayed:replay.receipt.replayed};`, 'initial')
+    return {case_id:p.case_id,context,traced,exported,report,repeat_materials:b.new_materials.length,replayed:replay.receipt.replayed};`, 'initial')
+  assert.equal(first.traced.complete,true);assert.equal(first.traced.recorded_origin_count,1);assert.equal(first.traced.entries.length,1);
   assert.equal(first.context.recorded_origin_count,1); assert.equal(first.context.folded_count,2)
   assert.equal(first.repeat_materials,0); assert.equal(searches,2); assert.equal(first.replayed,true)
   const bundle=JSON.parse(await readFile(first.exported.path,'utf8')); assert.ok(verifyBundle(bundle).valid)
@@ -54,7 +56,7 @@ try {
   plugin=ctx.plugin(Plugin,Plugin.Config({root:join(directory,'store')})); await plugin
   const resumed=await call('return await tools.evidence_resume({});','resume')
   assert.ok(resumed.cases.some(c=>c.case_id===first.case_id))
-  const report={kind:'actual-dsh-host-ptc-offline-provider',model_calls:0,network_searches:0,provider_calls:searches,tools:10,workflow_nested_calls:before,total_nested_calls:nested,
+  const report={kind:'actual-dsh-host-ptc-offline-provider',model_calls:0,network_searches:0,provider_calls:searches,tools:11,trace_checked:true,workflow_nested_calls:before,total_nested_calls:nested,
     dsh_commit:execFileSync('git',['-c',`safe.directory=${checkout.replaceAll('\\','/')}`,'rev-parse','HEAD'],{cwd:checkout,encoding:'utf8'}).trim(),
     recorded_origins:1,folded_items:2,repeat_search_new_materials:0,retry_avoids_provider_call:true,host_session_identity_checked:true,remount_recovery:true,export_verified:true,
     script_sha256:digest(await readFile(new URL(import.meta.url),'utf8')),limitations:['Offline deterministic web provider; not a network search or model accuracy evaluation','Plugin remount within one host process; separate-process SQLite recovery is tested by npm test','No child LLM was spawned; report contract was called through real DSH tools']}

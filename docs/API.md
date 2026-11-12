@@ -1,6 +1,6 @@
 # 接口与工作流
 
-10 个正式 DSH 工具均返回结构化 JSON；Native 和 PTC 使用同一实现。需要真实 DSH Agent Session；不接受模型自填 Session 身份。
+11 个正式 DSH 工具均返回结构化 JSON；Native 和 PTC 使用同一实现。需要真实 DSH Agent Session；不接受模型自填 Session 身份。
 
 | 工具 | 必填参数 | 行为 |
 |---|---|---|
@@ -12,6 +12,7 @@
 | `evidence_link` | `case_id,child,parent,relation,note,expected_revision` | 添加可审计来源断言；可加 `reference_excerpt` 检查原文内的 URL 引用 |
 | `evidence_link_revoke` | `case_id,edge_id,reason,expected_revision` | 撤销关系，不删除材料和历史 |
 | `evidence_context` | `case_id` | 可加 `claim,offset,limit`；返回正文、别名和来源图摘要 |
+| `evidence_trace` | `case_id,evidence_ids` | 查询 1–20 条材料的源头；可加 `offset,limit`；只返回来源对应项，不重复正文 |
 | `evidence_get` | `case_id,evidence_id` | 原文、来源、身份、指纹、相关边 |
 | `evidence_export` | `case_id` | 写入 `root/exports/`，返回文件路径、哈希与校验结果 |
 
@@ -38,9 +39,18 @@ await tools.evidence_report({
 
 引用关系不得仅由相似度推断。`citation` 只表示提到父材料。`derivation` 用于当前条目全部来自父材料的情况；同一文档包含自己的调查时，把新增部分单独作为条目录入，或只建立 citation。
 
+## 精简来源查询
+
+```javascript
+const t = await tools.evidence_trace({case_id:'<case_id>',evidence_ids:['<ev_id>'],limit:100});
+return t;
+```
+
+`recorded_origin_count` 是整个案例的记录来源家族数；`entries` 是所选材料的 `{evidence_id,source_id}` 对应项。每页默认 100、最多 200 项，按 `next_offset` 继续读；只有从起始位置一次覆盖全部时 `complete=true`。查询仍有当前 revision、未知独立性声明和条件性来源说明。它不返回正文，事实判断仍需 `evidence_get` 或完整上下文。
+
 ## 完整视图与导出
 
-默认每页 50 个保留条目，最大 200；`next_offset` 非空时继续读取。不会截断单条正文；`complete=false` 提示当前页不覆盖全部。`aliases` 是折叠材料 ID，原文及独立 URL 均留在数据库。
+默认每页 50 个保留条目，最大 200；`next_offset` 非空时继续读取。插件自身不会截断单条正文；DSH 可对过长展示保留头尾并提供完整 spill 文件恢复入口，调用方应遵循该入口或使用较小分页。`complete=false` 提示当前页不覆盖全部。`aliases` 是折叠材料 ID，原文及独立 URL 均留在数据库。
 
 每条正文最大 20,000 字符；一次导入 100 条、汇报 50 条，每条最多 30 个 refs；每案例 2,000 条材料、10,000 条关系、10,000 次变更、16 MB 状态。超限报错并回滚，不默默丢弃。URL 查询参数和 fragment 保留，避免把不同资源误合并。
 
