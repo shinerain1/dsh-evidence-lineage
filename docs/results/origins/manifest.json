@@ -1,0 +1,133 @@
+{
+  "created_utc": "2026-11-12T04:27:37.028Z",
+  "plugin_version": "0.1.0",
+  "plugin_source_commit": "3406417cfcec0a6950795302a0a28ef7c1dc55cb",
+  "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
+  "model": "deepseek-official/deepseek-flash",
+  "reasoning": "low",
+  "max_tokens": 16384,
+  "deadline_seconds": 300,
+  "unique_cases": 6,
+  "materials": 192,
+  "queries_per_case": 4,
+  "plans": [
+    {
+      "arm": "raw",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 107,
+      "mode": "native",
+      "id": "native-107-lineage"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-lineage"
+    },
+    {
+      "arm": "raw",
+      "seed": 211,
+      "mode": "native",
+      "id": "native-211-raw"
+    },
+    {
+      "arm": "lineage",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-lineage"
+    },
+    {
+      "arm": "raw",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 307,
+      "mode": "native",
+      "id": "native-307-text-dedup"
+    },
+    {
+      "arm": "raw",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-raw"
+    },
+    {
+      "arm": "text-dedup",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-text-dedup"
+    },
+    {
+      "arm": "lineage",
+      "seed": 107,
+      "mode": "ptc",
+      "id": "ptc-107-lineage"
+    }
+  ],
+  "hashes": {
+    "experiments/origins/PROTOCOL.md": "296c4e604c133a59ec0a7bc788b93199cba5598c664e7e7b3d3af562cc4a3226",
+    "experiments/origins/packet-plugin.mjs": "942ebf813fcbf9aef27ee0dfabc2e4da8390675f798977ae6c5822692c371110",
+    "scripts/origin-eval.mjs": "847d5dd6f2e2eacfe97f69f185c21ea2585fa84402124ba0e78016f610b69fed",
+    "src/store.ts": "6165eefde44367f701eefd742e599b9684df7bd11aef5015cd028466693bd75c",
+    "lib/store.js": "0e85e58681818e08da25a6171c75f294112b24f40c537d3aa67cd5851ff53278"
+  },
+  "packet_hashes": {
+    "raw-107": {
+      "sha256": "e1118495b6ca904508b816a13c9085cc06235ccd2cdd53156532f3e9924f1ec2",
+      "bytes": 88156
+    },
+    "text-dedup-107": {
+      "sha256": "dd26ef5aeeec11c29e508a9e14c69fc0ecae14a8678b31ef6a97d6d4c80e605c",
+      "bytes": 88027
+    },
+    "lineage-107": {
+      "sha256": "839b9b2b483aa8459bb18e37d3938957c209fbb87d178de18757feb6926393cc",
+      "bytes": 115086
+    },
+    "raw-211": {
+      "sha256": "3e8bdc09bbc987055246f5d3efd873d432f54be8b6b746829c33e9cd8445e4f9",
+      "bytes": 88156
+    },
+    "text-dedup-211": {
+      "sha256": "a424ae72c9dd6d59ec5450359b1d7d9acc8c62de73ae68519d6b68af7033a47c",
+      "bytes": 88027
+    },
+    "lineage-211": {
+      "sha256": "3fa0bd9826f187ce73a4e7e71baffd1e4dfc9625fb733676a0f0b02c77c44d2d",
+      "bytes": 115086
+    },
+    "raw-307": {
+      "sha256": "471b741c4ea939e17eb64c457e8b23c801e5cccf2d9e7825015fa17791bb8088",
+      "bytes": 88156
+    },
+    "text-dedup-307": {
+      "sha256": "f70ca1d53aff6e2f2806dd1712ecec3078fe03155f19f6c415d324ee047a5bde",
+      "bytes": 88027
+    },
+    "lineage-307": {
+      "sha256": "681297a307d9c22be45909ee12a9bf2d5905a94a67cce51429a6e05c3d756d58",
+      "bytes": 115086
+    }
+  },
+  "task_sha256": "5a64184161f6493438f0369d04ada0a8753a4f1c01fe13a78005ff043d158898"
+}

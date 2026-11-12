@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "packets": 9,
+  "unique_cases": 6,
+  "materials": 192,
+  "queries": 24,
+  "all_texts_ids_urls_and_links_preserved": true,
+  "independent_python_oracle_matches": true,
+  "max_derivation_depth": {
+    "G03": 11,
+    "G04": 6,
+    "G05": 6,
+    "G02": 8,
+    "G01": 4,
+    "G06": 5
+  },
+  "frozen_code_unchanged": true
+}
