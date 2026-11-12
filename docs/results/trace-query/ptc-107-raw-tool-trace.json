@@ -1,0 +1,50 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_YTTdHFqARf6XxV0FkM0b7159",
+      "tool": "run_code",
+      "input": {
+        "description": "Fetch all six origin case packets",
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  console.log(\"====\", ids[i], JSON.stringify(results[i]).length);\n}\nreturn results;"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_k8U4nIMHBdOPxg5WPhQz5964",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  const c = res[i].cases[0];\n  const e = c.evidence;\n  console.log(ids[i], \"keys:\", Object.keys(e).join(\",\"), \"| qids:\", JSON.stringify(c.query_ids));\n  console.log(\"  recorded:\", e.recorded_origin_count, \"complete:\", e.complete, \"next_offset:\", e.next_offset);\n  console.log(\"  items:\", Array.isArray(e.items)?e.items.length:\"-\", \"links:\", Array.isArray(e.links)?e.links.length:\"-\", \"material_index:\", Array.isArray(e.material_index)?e.material_index.length:\"-\", \"entries:\", Array.isArray(e.entries)?e.entries.length:\"-\");\n}",
+        "description": "Inspect evidence structure of all cases"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_GQZKss5X1zxyUYzRmigk1933",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  const c = res[i].cases[0]; const e=c.evidence;\n  const itemKeys = new Set<string>();\n  for (const it of e.items) for (const k of Object.keys(it)) itemKeys.add(k);\n  const miKeys = new Set<string>();\n  for (const m of e.material_index) for (const k of Object.keys(m)) miKeys.add(k);\n  const srcCounts: Record<string,number> = {};\n  for (const m of e.material_index) srcCounts[m.source_id]=(srcCounts[m.source_id]||0)+1;\n  const dup = Object.entries(srcCounts).filter(([k,v])=>v>1);\n  console.log(ids[i],\"itemKeys:\",[...itemKeys].join(\",\"),\"miKeys:\",[...miKeys].join(\",\"));\n  console.log(\"  dup sources:\",JSON.stringify(dup));\n  console.log(\"  index ids not in items:\", e.material_index.filter((m:any)=>!e.items.some((it:any)=>it.id===m.id)).map((m:any)=>m.id));\n  console.log(\"  items not in index:\", e.items.filter((it:any)=>!e.material_index.some((m:any)=>m.id===it.id)).map((it:any)=>it.id));\n}",
+        "description": "Check alias fields and duplicate sources"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_yam0OKODrUlDN1I07pch2596",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nconst out:any = {cases:[]};\nfor (let i=0;i<ids.length;i++){\n  const c = res[i].cases[0]; const e=c.evidence;\n  const src: Record<string,string> = {};\n  const allSources = new Set<string>();\n  for (const m of e.material_index){ src[m.id]=m.source_id; allSources.add(m.source_id); }\n  const parents: Record<string,string[]> = {};\n  for (const l of e.links){\n    if (l.relation === \"derivation\"){\n      (parents[l.child] ||= []).push(l.parent);\n    }\n  }\n  const memo: Record<string,Set<string>> = {};\n  const calc = (id:string, stack:Set<string>):Set<string> => {\n    if (memo[id]) return new Set(memo[id]);\n    const ps = parents[id] || [];\n    if (ps.length===0 || stack.has(id)) return new Set([src[id]]);\n    stack.add(id);\n    const s = new Set<string>();\n    for (const p of ps) for (const o of calc(p, stack)) s.add(o);\n    stack.delete(id);\n    memo[id]=new Set(s);\n    return s;\n  };\n  const queries = c.query_ids.map((q:string)=>({material_id:q, origins:[...calc(q,new Set())].sort()}));\n  // check unknown refs\n  const unknown = [...new Set(e.links.flatMap((l:any)=>[l.child,l.parent]))].filter((x:any)=>!src[x]);\n  out.cases.push({id:c.id, recorded_origin_count:allSources.size, independence:\"unknown\", queries, _unknown:unknown, _rel:(()=>{const r:any={};for(const l of e.links)r[l.relation]=(r[l.relation]||0)+1;return r;})()});\n}\nconsole.log(JSON.stringify(out,null,1));",
+        "description": "Traverse derivation graphs and compute origins"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_hBgT5hqo78PrOsGXQUTD8725",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  const c=res[i].cases[0]; const e=c.evidence;\n  const parents: Record<string,string[]> = {};\n  for (const l of e.links) if (l.relation===\"derivation\") (parents[l.child] ||= []).push(l.parent);\n  // cycle detection\n  const color: Record<string,number> = {}; let cycles:string[]=[];\n  const dfs=(u:string,path:string[])=>{\n    color[u]=1;\n    for(const p of (parents[u]||[])){\n      if(color[p]===1) cycles.push([...path,u,p].join(\"->\"));\n      else if(!color[p]) dfs(p,[...path,u]);\n    }\n    color[u]=2;\n  };\n  for(const m of e.material_index) if(!color[m.id]) dfs(m.id,[]);\n  const src:any={}; for(const m of e.material_index) src[m.id]=m.source_id;\n  // leaf origins per query\n  console.log(\"==\",ids[i],\"cycles:\",cycles.length?cycles:\"none\");\n  for(const q of c.query_ids){\n    const leaves=new Set<string>(); const seen=new Set<string>();\n    const rec=(id:string)=>{ if(seen.has(id))return; seen.add(id); const ps=parents[id]||[]; if(!ps.length){leaves.add(id);return;} for(const p of ps)rec(p); };\n    rec(q);\n    console.log(\" \",q,\"leaves:\",[...leaves].map(x=>x+\"(\"+src[x]+\")\").join(\",\"));\n  }\n  if(ids[i]===\"G04\"){\n    console.log(\"  citation links:\",JSON.stringify(e.links.filter((l:any)=>l.relation!==\"derivation\")));\n  }\n}",
+        "description": "Detect cycles and list leaf origins per query"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

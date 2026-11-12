@@ -1,0 +1,32 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_9Xe5S0tbnjzY0t9vpKnT4508",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nreturn results;",
+        "description": "Fetch all six origin packets"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_9vjRqN1vcY5hdBSiq4tz6048",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (const r of results) {\n  for (const c of r.cases) {\n    const e = c.evidence;\n    console.log(JSON.stringify({\n      id: c.id,\n      query_ids: c.query_ids,\n      evidenceKeys: Object.keys(e),\n      recorded_origin_count: e.recorded_origin_count,\n      recorded_origins: e.recorded_origins,\n      itemCount: e.items ? e.items.length : null,\n      linksCount: e.links ? e.links.length : null,\n      indexCount: e.material_index ? e.material_index.length : null,\n      entriesCount: e.entries ? e.entries.length : null,\n      complete: e.complete,\n      next_offset: e.next_offset,\n      material_count: e.material_count,\n      folded_count: e.folded_count,\n      firstItem: e.items && e.items[0] ? Object.keys(e.items[0]) : null,\n      firstIndex: e.material_index && e.material_index[0],\n      firstLink: e.links && e.links[0]\n    }));\n  }\n}",
+        "description": "Summarize evidence shape for each case"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_JZoyIuIIdsZ4enzPoZ820561",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nconst out = [];\nfor (const r of results) {\n  const c = r.cases[0];\n  const e = c.evidence;\n  const src = new Map();\n  for (const m of e.material_index) src.set(m.id, m.source_id);\n  const parents = new Map();\n  for (const l of e.links) {\n    if (l.relation !== \"derivation\") continue;\n    if (!parents.has(l.child)) parents.set(l.child, []);\n    parents.get(l.child).push(l.parent);\n  }\n  // ensure every material id node exists\n  for (const id of src.keys()) if (!parents.has(id)) parents.set(id, []);\n  const memo = new Map();\n  const visiting = new Set();\n  const originsOf = (id) => {\n    if (memo.has(id)) return memo.get(id);\n    if (visiting.has(id)) throw new Error(\"cycle at \" + id);\n    visiting.add(id);\n    const ps = parents.get(id) || [];\n    let set;\n    if (ps.length === 0) {\n      set = new Set([src.get(id)]);\n    } else {\n      set = new Set();\n      for (const p of ps) for (const o of originsOf(p)) set.add(o);\n    }\n    visiting.delete(id);\n    memo.set(id, set);\n    return set;\n  };\n  const all = new Set();\n  const perNode = {};\n  for (const id of src.keys()) {\n    const s = originsOf(id);\n    perNode[id] = [...s].sort();\n    for (const o of s) all.add(o);\n  }\n  // compare with precomputed item origins\n  const mismatches = [];\n  for (const it of (e.items || [])) {\n    const comp = perNode[it.id];\n    const rec = (it.origins || []).slice().sort();\n    if (JSON.stringify(comp) !== JSON.stringify(rec)) mismatches.push({id: it.id, comp, rec});\n  }\n  const queries = c.query_ids.map(q => ({material_id: q, origins: perNode[q] || null}));\n  out.push({id: c.id, recorded_origin_count: e.recorded_origin_count, computedOriginCount: all.size, computedOrigins: [...all].sort(), queries, precomputedMismatches: mismatches});\n}\nconsole.log(JSON.stringify(out, null, 1));",
+        "description": "Traverse derivation graph and compute origins"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

@@ -9,7 +9,7 @@ report = load(out/'results.json')
 rows=[]
 for run in report['runs']:
     final=load(out/(run['id']+'-final.json'))
-    if final['reason']['kind']!='completed' or run['protocol_errors'] or run['parse_error']:
+    if (final.get('reason') or {}).get('kind')!='completed' or run['protocol_errors'] or run['parse_error']:
         rows.append({'id':run['id'],'complete':False});continue
     text=final['text'].strip()
     if text.startswith('```'):text='\n'.join(text.splitlines()[1:-1])

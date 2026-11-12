@@ -1,0 +1,12 @@
+{
+  "kind": "installed-tarball-actual-dsh-profile-native-tools",
+  "sdk_peers_from_host": true,
+  "tools": 11,
+  "trace_checked": true,
+  "native_calls": 7,
+  "unknown_equal_text_preserved": true,
+  "report_folded_with_retrievable_origin": true,
+  "export_verified": true,
+  "unload": true,
+  "model_calls": 0
+}

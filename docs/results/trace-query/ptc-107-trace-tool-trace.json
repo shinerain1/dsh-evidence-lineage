@@ -1,0 +1,32 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_zRL6Z7RiVLAZdkGPmach1979",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = {};\nfor (const id of ids) {\n  packets[id] = await tools.origin_packet({case_id: id});\n}\n// Inspect structure/summary first\nfor (const id of ids) {\n  const p = packets[id];\n  const c = p.packet?.cases?.[0] ?? p.cases?.[0];\n  console.log(\"=== \", id, \" keys:\", Object.keys(p));\n  console.log(\"case keys:\", c ? Object.keys(c) : \"NONE\");\n  if (c) {\n    console.log(\"id:\", c.id, \"query_ids:\", JSON.stringify(c.query_ids));\n    console.log(\"evidence keys:\", Object.keys(c.evidence||{}));\n  }\n}\n",
+        "description": "Fetch six origin packets and inspect structure"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_VYADkwApSLxsV8KsqUEZ8418",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = {};\nfor (const id of ids) packets[id] = await tools.origin_packet({case_id: id});\nfor (const id of ids) {\n  const c = packets[id].cases[0], e = c.evidence;\n  console.log(\"===\", id, \"complete:\", e.complete, \"next_offset:\", JSON.stringify(e.next_offset), \"recorded_origin_count:\", e.recorded_origin_count, \"material_count:\", e.material_count, \"total_origin_pairs:\", e.total_origin_pairs);\n  console.log(\"entries len:\", e.entries?.length, \"sample:\", JSON.stringify(e.entries?.slice(0,4)));\n  console.log(\"total_origin_pairs type\", typeof e.total_origin_pairs);\n}\n",
+        "description": "Inspect compact trace entries and completeness"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_niLSVpPpTsLEikAyOnu99007",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = {};\nfor (const id of ids) packets[id] = await tools.origin_packet({case_id: id});\nconst out = {cases: []};\nfor (const id of ids) {\n  const c = packets[id].cases[0], e = c.evidence;\n  const map = new Map();\n  for (const q of c.query_ids) map.set(q, new Set());\n  for (const en of e.entries) {\n    if (!map.has(en.evidence_id)) map.set(en.evidence_id, new Set());\n    map.get(en.evidence_id).add(en.source_id);\n  }\n  const queries = c.query_ids.map(q => ({material_id: q, origins: [...map.get(q)].sort()}));\n  out.cases.push({id: c.id, recorded_origin_count: e.recorded_origin_count, independence: \"unknown\", queries});\n}\nconsole.log(JSON.stringify(out));\n",
+        "description": "Build per-case origin answers from compact traces"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

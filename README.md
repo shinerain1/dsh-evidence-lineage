@@ -22,7 +22,7 @@
 需要 Node.js **24.9+**，已在 DSH **0.2.2-alpha.3** 的实际工具执行与 PTC 环境验证。兼容声明为 `>=0.2.2-alpha.3 <0.3.0`；未对该范围内每个版本逐一测试。
 
 ```powershell
-dsh plugin add https://github.com/shinerain1/dsh-evidence-lineage/releases/download/v0.1.0/dsh-evidence-lineage-0.1.0.tgz
+dsh plugin add https://github.com/shinerain1/dsh-evidence-lineage/releases/download/v0.2.0/dsh-evidence-lineage-0.2.0.tgz
 ```
 
 包自带编译后的 `lib/` 和 `cordis.patch.yml`，不需要 Python 后端或自行编译。重启对应 DSH 配置后会加载插件。已有 DSH 搜索配置才可使用联网搜索；其余本地工具不需要搜索登录。
@@ -48,6 +48,9 @@ dsh plugin add https://github.com/shinerain1/dsh-evidence-lineage/releases/downl
 折叠是上下文视图操作；原材料和来源身份仍可按 ID 查询、全部导出。不同措辞即使同源也保留，因此长篇改写不会自动压缩。完整性校验不是数字签名，同机有文件访问权限的人可以修改数据库或重新生成校验值。
 
 ## 验证
+
+**v0.2.0 来源查询复测：** 新增分页的 `evidence_trace`。在六张受控图、三次顺序重复的实际 DSH 对照中，精简查询相较原始材料在 Native/PTC 内分别少用约 80%/81% 主 Agent token（PTC 原始组有一次未交付最终答案，已单列，不能解释为双方全部完成时的费用差）。复测也记录了原始组把材料自身来源数误作源头家族数的具体运行；并非每次都会错，也未证明降低错误结论率。见 [完整配对结果、失败与边界](docs/TRACE-QUERY-EXPERIMENT.md)。
+
 
 见 [实验报告](docs/EXPERIMENTS.md)、[真实案例及来源](docs/REAL-CASE.md)、[机器可读结果](docs/results/)。包含实际 DSH 工具/PTC 测试、独立进程恢复、对抗样例、真实模型固定上下文对照及 PROV 库互操作。
 

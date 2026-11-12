@@ -1,0 +1,727 @@
+{
+  "valid": true,
+  "checked_runs": 18,
+  "completed_runs": 17,
+  "unique_cases": 6,
+  "independent_scorer_matches": true,
+  "rows": [
+    {
+      "id": "native-107-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G02",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G03",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G04",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G05",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G06",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        }
+      ]
+    },
+    {
+      "id": "native-107-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-107-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-211-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "native-307-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G02",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G03",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G04",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G05",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        },
+        {
+          "id": "G06",
+          "count_correct": false,
+          "queries_correct": 4,
+          "all_correct": false
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-107-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-211-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-211-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-211-raw",
+      "complete": false
+    },
+    {
+      "id": "ptc-307-trace",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-307-raw",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    },
+    {
+      "id": "ptc-307-lineage",
+      "complete": true,
+      "cases": [
+        {
+          "id": "G01",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G02",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G03",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G04",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G05",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        },
+        {
+          "id": "G06",
+          "count_correct": true,
+          "queries_correct": 4,
+          "all_correct": true
+        }
+      ]
+    }
+  ]
+}

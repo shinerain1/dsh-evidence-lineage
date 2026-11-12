@@ -1,0 +1,119 @@
+{
+  "scope": "paired main-Agent token totals, not billing or probability calibration",
+  "comparisons": [
+    {
+      "mode": "native",
+      "baseline": "raw",
+      "reduction_pct_total": 80.25607962444342,
+      "per_order_reduction_pct": [
+        81.03107598347404,
+        79.40562599295973,
+        80.29795930456417
+      ]
+    },
+    {
+      "mode": "native",
+      "baseline": "lineage",
+      "reduction_pct_total": 83.85105962229326,
+      "per_order_reduction_pct": [
+        84.04391951446775,
+        83.42193690756808,
+        84.07736314239894
+      ]
+    },
+    {
+      "mode": "ptc",
+      "baseline": "raw",
+      "reduction_pct_total": 81.01230319303156,
+      "per_order_reduction_pct": [
+        82.8933120705609,
+        57.02052657848764,
+        89.89697793138018
+      ]
+    },
+    {
+      "mode": "ptc",
+      "baseline": "lineage",
+      "reduction_pct_total": 63.21470654675776,
+      "per_order_reduction_pct": [
+        71.09351608503277,
+        27.735962864860607,
+        76.62872661804644
+      ]
+    }
+  ],
+  "count_errors": [
+    {
+      "id": "native-107-raw",
+      "case": "G01",
+      "predicted": 24,
+      "expected": 2
+    },
+    {
+      "id": "native-107-raw",
+      "case": "G02",
+      "predicted": 30,
+      "expected": 1
+    },
+    {
+      "id": "native-107-raw",
+      "case": "G03",
+      "predicted": 36,
+      "expected": 4
+    },
+    {
+      "id": "native-107-raw",
+      "case": "G04",
+      "predicted": 36,
+      "expected": 8
+    },
+    {
+      "id": "native-107-raw",
+      "case": "G05",
+      "predicted": 30,
+      "expected": 6
+    },
+    {
+      "id": "native-107-raw",
+      "case": "G06",
+      "predicted": 35,
+      "expected": 3
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G01",
+      "predicted": 24,
+      "expected": 2
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G02",
+      "predicted": 30,
+      "expected": 1
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G03",
+      "predicted": 36,
+      "expected": 4
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G04",
+      "predicted": 36,
+      "expected": 8
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G05",
+      "predicted": 30,
+      "expected": 6
+    },
+    {
+      "id": "ptc-107-raw",
+      "case": "G06",
+      "predicted": 35,
+      "expected": 3
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_sLvwgtKO9SEo8J1exqJ01300",
+      "tool": "run_code",
+      "input": {
+        "description": "Fetch all six origin packets in parallel",
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({ case_id: id })));\nfor (let i = 0; i < ids.length; i++) {\n  console.log(\"=== \" + ids[i] + \" ===\");\n  console.log(JSON.stringify(results[i]).slice(0, 4000));\n}\n"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_IE023y4KbnFkWK9MuCvO8455",
+      "tool": "run_code",
+      "input": {
+        "code": "const r = await tools.origin_packet({case_id:\"G02\"});\nconst c = r.cases[0];\nconst ev = c.evidence;\nconsole.log(\"case keys\", Object.keys(c));\nconsole.log(\"evidence keys\", Object.keys(ev));\nconsole.log(\"material_index type/len\", Array.isArray(ev.material_index)?ev.material_index.length:typeof ev.material_index);\nconsole.log(JSON.stringify(ev.material_index).slice(0,3000));\nconsole.log(\"items len\", ev.items.length, \"keys\", Object.keys(ev.items[0]));\nconsole.log(\"links len\", ev.links.length, \"sample\", JSON.stringify(ev.links.slice(0,3)));\nconsole.log(\"query_ids\", c.query_ids);\n",
+        "description": "Inspect G02 packet structure"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_MDgGKD29hrVZLFHin1Yg6241",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = await Promise.all(ids.map(id => tools.origin_packet({case_id:id})));\nconst all = {};\nfor (const r of packets) {\n  const c = r.cases[0];\n  const ev = c.evidence;\n  const sourceById = {};\n  for (const m of ev.material_index) sourceById[m.id] = m.source_id;\n  const parents = {};\n  for (const l of ev.links) {\n    if (l.relation !== \"derivation\") continue;\n    (parents[l.child] ||= []).push(l.parent);\n  }\n  const itemById = {};\n  for (const it of ev.items) itemById[it.id] = it;\n  // add any ids from items/links not in index\n  const allIds = new Set([...Object.keys(sourceById), ...Object.keys(itemById), ...Object.keys(parents), ...ev.links.map(l=>l.parent)]);\n  const memo = {};\n  const visiting = new Set();\n  function resolve(id) {\n    if (memo[id]) return memo[id];\n    if (visiting.has(id)) return new Set(); // cycle guard\n    visiting.add(id);\n    const ps = (parents[id]||[]).filter(p => allIds.has(p));\n    let out;\n    if (ps.length === 0) {\n      out = new Set(sourceById[id] ? [sourceById[id]] : []);\n    } else {\n      out = new Set();\n      for (const p of ps) for (const o of resolve(p)) out.add(o);\n    }\n    visiting.delete(id);\n    memo[id] = out;\n    return out;\n  }\n  const unionAll = new Set();\n  for (const id of allIds) for (const o of resolve(id)) unionAll.add(o);\n  const disc = [];\n  for (const id of allIds) {\n    const it = itemById[id];\n    if (it && it.origins) {\n      const a = [...resolve(id)].sort().join(\",\");\n      const b = [...it.origins].sort().join(\",\");\n      if (a !== b) disc.push({id, computed:[...resolve(id)], item:it.origins});\n    }\n  }\n  all[c.id] = {case:c, sourceById, parents, itemById, allIds, resolve, unionAll, disc};\n  console.log(\"===\",c.id,\"===\");\n  console.log(\"materials\", ev.material_count, \"allIds\", allIds.size, \"recorded_count\", ev.recorded_origin_count, \"recorded\", ev.recorded_origins);\n  console.log(\"computed union size\", unionAll.size, [...unionAll]);\n  console.log(\"discrepancies\", JSON.stringify(disc));\n  console.log(\"roots\", [...allIds].filter(id=>(parents[id]||[]).length===0 || (parents[id]||[]).every(p=>!allIds.has(p))).map(id=>({id, src:sourceById[id], item:!!itemById[id]})));\n}\n",
+        "description": "Build graphs and compare computed vs precomputed origins"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_0mLnoFbH5MGiakmIJ2Ce8407",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst packets = await Promise.all(ids.map(id => tools.origin_packet({case_id:id})));\nconst cases = [];\nfor (const r of packets) {\n  const c = r.cases[0];\n  const ev = c.evidence;\n  const sourceById = {};\n  for (const m of ev.material_index) sourceById[m.id] = m.source_id;\n  const parents = {};\n  for (const l of ev.links) if (l.relation === \"derivation\") (parents[l.child] ||= []).push(l.parent);\n  const allIds = new Set([...Object.keys(sourceById), ...ev.items.map(i=>i.id), ...Object.keys(parents), ...ev.links.map(l=>l.parent)]);\n  const memo = {};\n  function resolve(id) {\n    if (memo[id]) return memo[id];\n    const ps = (parents[id]||[]).filter(p=>allIds.has(p));\n    const out = new Set();\n    if (ps.length === 0) { if (sourceById[id]) out.add(sourceById[id]); }\n    else for (const p of ps) for (const o of resolve(p)) out.add(o);\n    memo[id] = out;\n    return out;\n  }\n  const unionAll = new Set();\n  for (const id of allIds) for (const o of resolve(id)) unionAll.add(o);\n  cases.push({\n    id: c.id,\n    recorded_origin_count: unionAll.size,\n    independence: \"unknown\",\n    queries: c.query_ids.map(q => ({material_id:q, origins:[...resolve(q)].sort()}))\n  });\n}\nconsole.log(JSON.stringify({cases}, null, 2));\n",
+        "description": "Compute queried origins and output final JSON"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

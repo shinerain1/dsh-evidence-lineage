@@ -1,0 +1,23 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_FExbVzqVgCCl6Gn6ErAc2134",
+      "tool": "run_code",
+      "input": {
+        "description": "Fetch all six origin case packets",
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  console.log(\"=====\", ids[i]);\n  console.log(JSON.stringify(res[i], null, 1));\n}"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_vss4DtpZVHOaXbEDeVRA1739",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids=[\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst res=await Promise.all(ids.map(id=>tools.origin_packet({case_id:id})));\nconst out=[];\nfor(let i=0;i<ids.length;i++){\n  const c=res[i].cases[0];\n  const ev=c.evidence;\n  const map={};\n  for(const e of ev.entries){ (map[e.evidence_id] ||= new Set()).add(e.source_id); }\n  out.push({\n    id:c.id,\n    recorded_origin_count:ev.recorded_origin_count,\n    independence:\"unknown\",\n    queries:c.query_ids.map(q=>({material_id:q, origins:[...(map[q]||[])].sort()}))\n  });\n}\nconsole.log(JSON.stringify({cases:out}));",
+        "description": "Build JSON answers grouped by evidence_id"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

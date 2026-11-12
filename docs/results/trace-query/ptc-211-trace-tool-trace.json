@@ -1,0 +1,41 @@
+{
+  "calls": [
+    {
+      "type": "tool_call",
+      "callId": "call_00_ET_o26iEhSn61rh2XISzb512671",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  const p = results[i];\n  const cases = p.cases ?? (p.packet?.cases) ?? [];\n  console.log(ids[i], \"keys:\", Object.keys(p), \"cases:\", cases.length);\n  for (const c of cases){\n    console.log(\" case\", c.id, \"keys:\", Object.keys(c), \"evidenceKeys:\", c.evidence?Object.keys(c.evidence):null);\n  }\n}\n",
+        "description": "Fetch all six case packets"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_TChOiuhdc2R6YjKYum0C5081",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nfor (let i=0;i<ids.length;i++){\n  const c = results[i].cases[0];\n  const e = c.evidence;\n  console.log(\"=====\", c.id);\n  console.log(\"query_ids:\", JSON.stringify(c.query_ids));\n  console.log(\"recorded_origin_count:\", e.recorded_origin_count, \"material_count:\", e.material_count, \"complete:\", e.complete, \"next_offset:\", e.next_offset);\n  console.log(\"entries count:\", e.entries?.length);\n  console.log(\"entry sample:\", JSON.stringify(e.entries?.slice(0,8)));\n  console.log(\"guidance:\", JSON.stringify(e.guidance));\n}\n",
+        "description": "Inspect compact trace structure per case"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_Q6FWyCCVjo1qs53G77707696",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nconst out = [];\nfor (let i=0;i<ids.length;i++){\n  const c = results[i].cases[0];\n  const e = c.evidence;\n  const g = {};\n  for (const en of e.entries){ (g[en.evidence_id] ??= []).push(en.source_id); }\n  console.log(\"=====\", c.id, \"query order:\", JSON.stringify(c.query_ids));\n  for (const q of c.query_ids){ console.log(q, JSON.stringify([...new Set(g[q]||[])])); }\n  if (Object.keys(g).length !== c.query_ids.length) console.log(\"other evidence ids:\", Object.keys(g).filter(k=>!c.query_ids.includes(k)));\n  out.push({id:c.id, recorded_origin_count:e.recorded_origin_count, query_ids:c.query_ids, g});\n}\nreturn out;\n",
+        "description": "Group origins by queried material"
+      }
+    },
+    {
+      "type": "tool_call",
+      "callId": "call_00_z7tOysHFZ4sGECVVdWw74600",
+      "tool": "run_code",
+      "input": {
+        "code": "const ids = [\"G01\",\"G02\",\"G03\",\"G04\",\"G05\",\"G06\"];\nconst results = await Promise.all(ids.map(id => tools.origin_packet({case_id: id})));\nconst cases = results.map((p) => {\n  const c = p.cases[0];\n  const e = c.evidence;\n  const g = new Map();\n  for (const en of e.entries){\n    if (!g.has(en.evidence_id)) g.set(en.evidence_id, []);\n    g.get(en.evidence_id).push(en.source_id);\n  }\n  return {\n    id: c.id,\n    recorded_origin_count: e.recorded_origin_count,\n    independence: \"unknown\",\n    queries: c.query_ids.map(q => ({ material_id: q, origins: [...new Set(g.get(q) || [])] }))\n  };\n});\nconsole.log(JSON.stringify({cases}));\n",
+        "description": "Build final JSON answer"
+      }
+    }
+  ],
+  "note": "Public run_code programs from CLI events; no chain of thought or credentials. Full packet integrity is checked separately."
+}

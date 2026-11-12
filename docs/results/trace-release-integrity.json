@@ -1,0 +1,20 @@
+{
+    "version":  "0.2.0",
+    "asset":  "dsh-evidence-lineage-0.2.0.tgz",
+    "sha256":  "c800a991e96642c5b3dec8386d34457b3b42f55e4aa7399a8a5b504f485b08c7",
+    "size":  284971,
+    "native_tools":  11,
+    "native_calls":  7,
+    "runtime_validation":  {
+                               "installed_candidate_sha256":  "fda0e20160ee56c2591a3f15f7c3eaff7bd1fec0b9194ccb650092fd402c10dd",
+                               "runtime_identical":  true,
+                               "runtime_js_sha256":  {
+                                                         "lib/cli.js":  "3aeb6890d5daf1f7e23dd81207a21a34087da0e65c5577aa47d4365820c2e2ae",
+                                                         "lib/index.js":  "9b5c3daef58f1d4bce0797695e0bb2e4df268d90e45153ca3ef1f26264ffe9e2",
+                                                         "lib/prov.js":  "a84a62b8aad162ddf3121441481de2011cc04598ccc021766fc0c8b3764b0a0b",
+                                                         "lib/store.js":  "761ccc386ba64a2b87f317e741b21d226bd4014fe12eee70da25341fe69dc8f5"
+                                                     },
+                               "runtime_package_metadata_identical":  true
+                           },
+    "note":  "Documentation was finalized after the clean-profile Native test; every runtime JavaScript file and runtime package field matches the tested candidate."
+}

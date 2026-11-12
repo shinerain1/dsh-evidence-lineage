@@ -1,0 +1,11 @@
+{
+  "reason": {
+    "kind": "completed"
+  },
+  "text": "{\"cases\":[{\"id\":\"G01\",\"recorded_origin_count\":2,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G01-m01\",\"origins\":[\"s_7422cb2b9c53\"]},{\"material_id\":\"G01-m13\",\"origins\":[\"s_7422cb2b9c53\"]},{\"material_id\":\"G01-m03\",\"origins\":[\"s_7422cb2b9c53\"]},{\"material_id\":\"G01-m07\",\"origins\":[\"s_7422cb2b9c53\"]}]},{\"id\":\"G02\",\"recorded_origin_count\":1,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G02-m30\",\"origins\":[\"s_69ea9c919799\"]},{\"material_id\":\"G02-m14\",\"origins\":[\"s_69ea9c919799\"]},{\"material_id\":\"G02-m23\",\"origins\":[\"s_69ea9c919799\"]},{\"material_id\":\"G02-m15\",\"origins\":[\"s_69ea9c919799\"]}]},{\"id\":\"G03\",\"recorded_origin_count\":4,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G03-m32\",\"origins\":[\"s_38049fafc4f2\",\"s_46d096faba80\",\"s_a5f7b3f7a0fd\"]},{\"material_id\":\"G03-m26\",\"origins\":[\"s_38049fafc4f2\"]},{\"material_id\":\"G03-m23\",\"origins\":[\"s_46d096faba80\",\"s_a5f7b3f7a0fd\"]},{\"material_id\":\"G03-m12\",\"origins\":[\"s_38049fafc4f2\",\"s_46d096faba80\",\"s_a5f7b3f7a0fd\"]}]},{\"id\":\"G04\",\"recorded_origin_count\":8,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G04-m19\",\"origins\":[\"s_f8310cb44ffe\"]},{\"material_id\":\"G04-m29\",\"origins\":[\"s_f8310cb44ffe\"]},{\"material_id\":\"G04-m20\",\"origins\":[\"s_f8310cb44ffe\"]},{\"material_id\":\"G04-m01\",\"origins\":[\"s_7721e3df79e8\"]}]},{\"id\":\"G05\",\"recorded_origin_count\":6,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G05-m01\",\"origins\":[\"s_4d00336313bb\"]},{\"material_id\":\"G05-m23\",\"origins\":[\"s_01ec136cbbde\"]},{\"material_id\":\"G05-m26\",\"origins\":[\"s_3cb3850101da\"]},{\"material_id\":\"G05-m20\",\"origins\":[\"s_3cb3850101da\"]}]},{\"id\":\"G06\",\"recorded_origin_count\":3,\"independence\":\"unknown\",\"queries\":[{\"material_id\":\"G06-m32\",\"origins\":[\"s_60480f43694b\"]},{\"material_id\":\"G06-m11\",\"origins\":[\"s_ef77eb421a75\"]},{\"material_id\":\"G06-m20\",\"origins\":[\"s_60480f43694b\"]},{\"material_id\":\"G06-m25\",\"origins\":[\"s_60480f43694b\"]}]}]}",
+  "observed_tool_calls": [
+    "run_code",
+    "run_code"
+  ],
+  "packet_sha256": "ca9f13bbfc94497dfb0c7803236b9b14a3829e24c5477b5ad694dc6407d30cbd"
+}
