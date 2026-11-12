@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-12",
+  "repository": "https://github.com/shinerain1/dsh-evidence-lineage",
+  "repository_id": 1452195496,
+  "previous_repository_name": "shinerain1/dsh-project-3",
+  "source_commit": "3406417cfcec0a6950795302a0a28ef7c1dc55cb",
+  "release": "https://github.com/shinerain1/dsh-evidence-lineage/releases/tag/v0.1.0",
+  "prerelease": true,
+  "artifact": "dsh-evidence-lineage-0.1.0.tgz",
+  "sha256": "3c983cf4b1fdc2daebf58a70a9fb63321038eade9b28c292a487032a3da0300a",
+  "public_download_checksum_matched": true,
+  "public_url_installed_by_actual_dsh_cli": true,
+  "fresh_isolated_profile": true,
+  "native_tool_validation": "results/public-profile.json",
+  "dsh_commit": "8bd073392eef6f54e921a093b95076248eb08cbb",
+  "node_version": "24.18.0",
+  "automated_tests_passed": 21,
+  "github_actions": "template supplied under ci/; not enabled or claimed as executed",
+  "artifact_unchanged_after_publication": true
+}
