@@ -22,6 +22,7 @@
     "examples"
   ],
   "scripts": {
+    "prepublishOnly": "npm run check",
     "build": "tsc -p tsconfig.json",
     "test": "node --test tests/*.test.mjs",
     "check": "npm run build && npm test",
@@ -62,5 +63,7 @@
     "evidence",
     "agent",
     "deduplication"
-  ]
+  ],
+  "bugs": {"url": "https://github.com/shinerain1/dsh-evidence-lineage/issues"},
+  "homepage": "https://github.com/shinerain1/dsh-evidence-lineage#readme"
 }
